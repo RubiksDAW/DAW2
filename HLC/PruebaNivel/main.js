@@ -42,7 +42,9 @@ boton.addEventListener('click', e => {
 })
 
 function reset() {
-
+    image.style.width = (Math.random() * screen.width + 100) + 'px';
+    image.style.height = (Math.random() * screen.height + 100) + 'px';
+    image.style.backgroundColor = "white";
 }
 //Tener en cuenta la proporcion de la pantalla, respecto a la proporcion de la imagen. Proporcion = ancho/alto 
 function randomSize() {
