@@ -16,12 +16,12 @@ boton.addEventListener('click', e => {
         document.body.style.backgroundColor = "black";
         image.style.width = screen.width + "px";
         console.log(image.style.width);
-        image.style.height = "auto";
+        image.style.height = 1920*(height/width)+"px";
         image.style.marginTop = (screen.height / 2) + "px"
         image.style.marginBottom = (screen.height / 2) + "px"
-        
+
         console.log(image.style.marginTop);
-        
+
 
         console.log('Entro en el primero');
 
@@ -29,7 +29,7 @@ boton.addEventListener('click', e => {
 
         document.body.style.backgroundColor = "black";
         // image.style.width = width / height;
-        image.style.width = height/width;
+        image.style.width = height / width;
         image.style.height = screen.height + "px";
 
         image.style.display = "block"
@@ -41,7 +41,9 @@ boton.addEventListener('click', e => {
 
 })
 
+function reset() {
 
+}
 //Tener en cuenta la proporcion de la pantalla, respecto a la proporcion de la imagen. Proporcion = ancho/alto 
 function randomSize() {
 
