@@ -19,13 +19,13 @@ public class Persona {
 		this.sexo = sexo;
 	}
 	
-	public void setDni(dni) {
+	public void setDni(String dni) {
 		this.dni = dni;
 	}
 
 	public void imprime(){
 		System.out.println("El dni es: " + this.dni);
-		System.out.println("El nombre es: "+ this.nombre)
+		System.out.println("El nombre es: "+ this.nombre);
 
 	}
 

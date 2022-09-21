@@ -1,15 +1,14 @@
 let boton = document.querySelector('#boton');
 let image = document.querySelector('#img');
 
-
 console.log(screen.availWidth);
 
 boton.addEventListener('click', e => {
+
     e.preventDefault();
 
     let width = Number((image.style.width).replace('px', ''));
     let height = Number((image.style.height).replace('px', ''));
-
 
     if (width > height) {
 
@@ -31,9 +30,9 @@ boton.addEventListener('click', e => {
 
         document.body.style.backgroundColor = "black";
         // image.style.width = width / height;
-        image.style.width = height / width;
+        image.style.width = ((1/3) * (screen.width)) + "px"
         image.style.height = screen.height + "px";
-
+        console.log(screen.height);
         image.style.display = "block"
         image.style.marginLeft = "auto"
         image.style.marginRight = "auto"
@@ -44,6 +43,7 @@ boton.addEventListener('click', e => {
 })
 
 function reset() {
+
     image.style.width = (Math.random() * screen.width + 100) + 'px';
     image.style.height = (Math.random() * screen.height + 100) + 'px';
     document.body.style.backgroundColor = "white";
@@ -51,6 +51,7 @@ function reset() {
     image.style.marginBottom = 0;
     image.style.marginLeft = 0;
     image.style.marginRight = 0;
+
 }
 //Tener en cuenta la proporcion de la pantalla, respecto a la proporcion de la imagen. Proporcion = ancho/alto 
 function randomSize() {
@@ -59,5 +60,6 @@ function randomSize() {
     image.style.height = (Math.random() * screen.height + 100) + 'px';
     console.log(image.style.width + " width");
     console.log(image.style.height + " height");
+
 }
 

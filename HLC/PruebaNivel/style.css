@@ -6,18 +6,4 @@
 	border: none;
 	outline: none;
 }
-body{
-   height: 1080px;
-    border: solid 3px black;
-}
 
-#boton{
-    display: inline-block;
-    
-    border: solid 2px black;
-
-}
-
-#img{
-    margin: 0;
-}
