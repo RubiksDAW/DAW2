@@ -11,28 +11,33 @@ public class CalculaNominas {
     }
 
     public static void main(String[] args) {
-        try {
+        
+            try {
+                Empleado emp1 = new Empleado("James", "3200032G", 'M', 4, 7);
 
-            Empleado emp1 = new Empleado("James", "3200032G", 'M', 4, 7);
+                CalculaNominas.escribe(emp1);
+                
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+            // Empleado emp1 = new Empleado("James", "3200032G", 'M', 4, 7);
 
-            Empleado emp2 = new Empleado("Ada", "32334344", 'F');
+            // Empleado emp2 = new Empleado("Ada", "32334344", 'F');
 
-            CalculaNominas.escribe(emp1);
+            // CalculaNominas.escribe(emp1);
 
-            CalculaNominas.escribe(emp2);
+            // CalculaNominas.escribe(emp2);
 
-            System.out.println("HACEMOS CAMBIOS");
+            // System.out.println("HACEMOS CAMBIOS");
 
-            emp2.incrAnyo();
+            // emp2.incrAnyo();
             
-            emp1.setCategoria(9);
+            // emp1.setCategoria(9);
 
-            CalculaNominas.escribe(emp1);
-            CalculaNominas.escribe(emp2);
+            // CalculaNominas.escribe(emp1);
+            // CalculaNominas.escribe(emp2);
 
-        } catch (DatosNoCorrectosException e) {
-            System.out.println(e);
-        }
+        
 
     }
 }
