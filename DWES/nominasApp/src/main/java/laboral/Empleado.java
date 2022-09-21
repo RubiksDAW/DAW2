@@ -14,20 +14,21 @@ public class Empleado extends Persona {
 
     public Empleado(String nombre, String dni, char sexo, int categoria, int anyosTrabajados)
             throws DatosNoCorrectosException {
+
         super(nombre, dni, sexo);
-
-        if (this.categoria < 1 || this.categoria > 10) {
+        
+        if (categoria < 1 || categoria > 10) {
             throw new DatosNoCorrectosException();
-
         } else {
             this.categoria = categoria;
         }
+
         if (anyosTrabajados < 0) {
             throw new DatosNoCorrectosException();
         } else {
             this.anyosTrabajados = anyosTrabajados;
-
         }
+
     }
 
     public void setCategoria(int categoria) {
