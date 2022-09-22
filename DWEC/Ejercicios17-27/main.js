@@ -34,18 +34,18 @@
 
 // Tarea 20 
 
-let num1 = prompt("Dame el primer numero");
-let num2 = prompt("Dame el segundo numero");
-let minNum = num1 < num2 ? num1: num2;
-let maxNum = num1 > num2 ? num1 : num2;
+// let num1 = prompt("Dame el primer numero");
+// let num2 = prompt("Dame el segundo numero");
+// let minNum = num1 < num2 ? num1: num2;
+// let maxNum = num1 > num2 ? num1 : num2;
 
-for (let index = minNum; index <= maxNum; index++) {
+// for (let index = minNum; index <= maxNum; index++) {
 
-    if(index % 8 == 0){
-       alert(index) 
-    }
+//     if(index % 8 == 0){
+//        alert(index) 
+//     }
        
-}
+// }
 
 // Tarea 21
 // let a = 2;
@@ -112,6 +112,101 @@ for (let index = minNum; index <= maxNum; index++) {
 // }
 
 // Tarea 24 
+
+// function esNarciso(numero) {
+
+//     let numeroComoCadena = numero.toString();
+
+//     let longitud = numeroComoCadena.length;
+
+//     let suma = 0;
+
+//     for (let i = 0; i < longitud; i++) {
+
+//         let cifra = parseInt(numeroComoCadena[i]);
+//         let numeroElevado = cifra ** longitud;
+//         suma = suma + numeroElevado;
+        
+//     }
+
+//     if(suma === numero){
+//         return console.log(`${numero} SI es NARCISO`);("Es narciso")
+//     }else{
+//         return console.log(`${numero} NO es NARCISO`);
+//     }
+    
+// }
+
+// for (let i = 0; i < 1000; i++) {
+
+//     esNarciso(i)
+    
+// }
+
+// Tarea 25
+// let numeroIngresado;
+// do {
+
+//    numeroIngresado = prompt("Ingresa un numero mayor que 100") 
+//    console.log(numeroIngresado);
+
+// } while (numeroIngresado < 100 && numeroIngresado != null && numeroIngresado != "");
+
+// Tarea 26
+
+/**Los números primos son aquellos que solo son divisibles entre ellos mismos y el 1, es decir, 
+ * que si intentamos dividirlos por cualquier otro número, el resultado no es entero */
+
+// function esPrimo(numero) {
+  
+//     for (let i = 2; i < numero; i++) {
+    
+//       if (numero % i === 0) {
+//         return false;
+//       }
+  
+//     }
+  
+//     if (numero === 1) {
+//       console.log("1 NO es un numero primo");
+//     } else {
+//       console.log(`${numero} SI es un numero primo.`);
+//     }
+  
+//     console.log("-------------------------------------");
+
+//   }
+
+//   for (let i = 2; i < 100; i++) {
+//     esPrimo(i)
+    
+//   }
+
+// Tarea 27
+
+let a = +prompt('a?', '');
+
+switch (a) {
+
+    case 0:
+        alert(0)
+        break;
+    case 1:
+        alert(1)
+        break;
+    case 2:
+        
+    case 3:
+        alert("2,3")
+        break;
+
+    default:
+        break;
+}
+
+
+
+
 
 
 
