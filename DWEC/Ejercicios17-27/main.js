@@ -34,20 +34,21 @@
 
 // Tarea 20 
 
-let num1 = prompt("Dame el primer numero");
-let num2 = prompt("Dame el segundo numero");
-let minNum = num1 < num2 ? num1: num2;
-let maxNum = num1 > num2 ? num1 : num2;
+// let num1 = prompt("Dame el primer numero");
+// let num2 = prompt("Dame el segundo numero");
+// let minNum = num1 < num2 ? num1: num2;
+// let maxNum = num1 > num2 ? num1 : num2;
 
-for (let index = minNum; index <= maxNum; index++) {
+// for (let index = minNum; index <= maxNum; index++) {
 
-    if(index % 8 == 0){
-       alert(index) 
-    }
+//     if(index % 8 == 0){
+//        alert(index) 
+//     }
        
-}
+// }
 
 // Tarea 21
+
 // let a = 2;
 // let b = 2;
 // let opcion;
@@ -103,6 +104,7 @@ for (let index = minNum; index <= maxNum; index++) {
 // }
 
 // // Tarea 23 
+
 // let index = 2
 // while (index <= 10) {
 //     if(index % 2 == 0){
