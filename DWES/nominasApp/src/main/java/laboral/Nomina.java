@@ -10,7 +10,7 @@ public class Nomina {
 
         sueldo = SUELDO_BASE[emp.getCategoria()] + 5000 * emp.anyosTrabajados;
 
-        return sueldo;
+        return sueldo ;
     }
 
 }
