@@ -39,13 +39,13 @@ let num2 = prompt("Dame el segundo numero");
 let minNum = num1 < num2 ? num1: num2;
 let maxNum = num1 > num2 ? num1 : num2;
 
-// for (let index = minNum; index <= maxNum; index++) {
+for (let index = minNum; index <= maxNum; index++) {
 
-//     if(index % 8 == 0){
-//        alert(index) 
-//     }
+    if(index % 8 == 0){
+       alert(index) 
+    }
        
-// }
+}
 
 // Tarea 21
 alert("Ejercicio 21")
