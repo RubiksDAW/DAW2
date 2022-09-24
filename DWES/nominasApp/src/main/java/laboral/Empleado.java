@@ -44,7 +44,7 @@ public class Empleado extends Persona {
     }
 
     public void imprime() {
-        System.out.println("Información empleado, nombre: " + super.nombre + "dni: " + super.dni + " sexo: "
+        System.out.println("Información empleado, nombre: " + super.nombre + " dni: " + super.dni + " sexo: "
                 + super.sexo + " categoria: " + this.categoria + " años trabajados: " + this.anyosTrabajados);
     }
 

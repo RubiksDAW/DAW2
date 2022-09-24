@@ -13,9 +13,13 @@ public class CalculaNominas {
     public static void main(String[] args) {
         
             try {
+
                 Empleado emp1 = new Empleado("James", "3200032G", 'M', 4, 7);
 
                 CalculaNominas.escribe(emp1);
+                
+                // Escribimos la información del sueldo en nuestro archivo de prueba
+                Nomina.Escribir(emp1);
                 
             } catch (Exception e) {
                 System.out.println(e);
@@ -37,7 +41,7 @@ public class CalculaNominas {
             // CalculaNominas.escribe(emp1);
             // CalculaNominas.escribe(emp2);
 
-        
+            
 
     }
 }
