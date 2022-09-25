@@ -12,6 +12,7 @@ public class CalculaNominas {
 
     public static void main(String[] args) {
         
+
             try {
 
                 Empleado emp1 = new Empleado("James", "3200032G", 'M', 4, 7);
