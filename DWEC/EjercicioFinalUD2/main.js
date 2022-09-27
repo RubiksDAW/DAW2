@@ -26,7 +26,7 @@ function esPrimo(numero) {
 }
 
 function descomponer(numero) {
-
+// hacer el bucle a la inversa restando a partir del numero que se le pasa como parametro, -- si el resto es 0 se imprime sino pasamos al siguiente.
    for (let i = 1; i <= numero; i++) {
         if(numero % i == 0){
             console.log();
