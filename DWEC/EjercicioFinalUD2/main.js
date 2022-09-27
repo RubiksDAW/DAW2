@@ -1,6 +1,10 @@
 let sumaTotal = 0;
 let numero;
 
+/**
+ * The function takes a number as an argument and adds it to the sumaTotal variable
+ * @param numero - The number to be added to the sum.
+ */
 function suma(numero) {
     
     sumaTotal = +numero + sumaTotal;
@@ -8,6 +12,12 @@ function suma(numero) {
 
 }
 
+/**
+ * If the number is not divisible by any number between 2 and the number itself, then it is a prime
+ * number.
+ * @param numero - the number to be checked
+ * @returns the number if it is prime.
+ */
 function esPrimo(numero) {
 
     for (let i = 2; i < numero; i++) {
@@ -26,6 +36,7 @@ function esPrimo(numero) {
 
 }
 
+/* Taking a number and dividing it by all the numbers that are divisible by it. */
 function descomponer(numero) {
     
     let auxiliar = numero;
@@ -43,7 +54,7 @@ function descomponer(numero) {
 do {
 
     numero = +prompt("Dame un numero")
-    while(isNaN(numero)){
+    while(+numero == NaN){
         alert("Dame un numero")
         numero =+prompt("Dame un numero, no una cadena")
 
