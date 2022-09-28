@@ -16,20 +16,21 @@ public class Nomina {
         return sueldo;
     }
 
-    private static void Leer() {
+    public static void Leer() {
         File doc = null;
         FileReader fr = null;
         BufferedReader br = null;
 
         try {
 
-            doc = new File("C:\\Users\\Alejandro\\Desktop\\empleados.txt");
+            doc = new File("C:\\Users\\Alejandro\\Desktop\\sueldos.dat");
             fr = new FileReader(doc);
             br = new BufferedReader(fr);
 
             String linea;
-
+            
             while ((linea = br.readLine()) != null) {
+                
                 System.out.println(linea);
             }
 
@@ -48,16 +49,13 @@ public class Nomina {
         try
         {
             // Debemos especificar la ruta, quizás añadir una variable 
-            fichero = new FileWriter("C:\\Users\\Alejandro\\Desktop\\prueba.txt", true);
+            fichero = new FileWriter("C:\\Users\\Alejandro\\Desktop\\sueldos.dat", true);
             pw = new PrintWriter(fichero);
 
             //Grabamos la información del empleado y añadimos un salto de linea
             pw.print("Sueldo de "+ emp.dni + ": " + Nomina.sueldo(emp));
             pw.println("\n");
             
-            
-          
-
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -72,7 +70,5 @@ public class Nomina {
         }
 
     }
-
-
 
 }
