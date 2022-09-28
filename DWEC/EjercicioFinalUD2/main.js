@@ -31,7 +31,7 @@ function esPrimo(numero) {
     if (numero === 1) {
         console.log("1 NO es un numero primo");
     } else {
-        return numero
+        return numero;
     }
 
 }
@@ -42,8 +42,8 @@ function descomponer(numero) {
     let auxiliar = numero;
     for (let i = 2; i <= numero; i++) {
         if(auxiliar % i == 0){
-            auxiliar = auxiliar / i
-            alert(i)
+            auxiliar = auxiliar / i;
+            alert(i);
             i--;
         }
     }
@@ -53,10 +53,11 @@ function descomponer(numero) {
 
 do {
 
-    numero = +prompt("Dame un numero")
-    while(+numero == NaN){
-        alert("Dame un numero")
-        numero =+prompt("Dame un numero, no una cadena")
+    numero = +prompt("Dame un numero");
+    // isNaN nos devuelve true si detecta que es un NaN
+    while(isNaN(numero) || (numero % 1 != 0) || numero < 0){
+        alert("Dame un numero entero positivo");
+        numero = +prompt("Dame un numero positivo, no una cadena o un decimal");
 
     }
     if(numero == ""){
@@ -71,5 +72,5 @@ do {
 if (esPrimo(sumaTotal)) {
     console.log("Es primo");
 } else {
-    descomponer(sumaTotal)
+    descomponer(sumaTotal);
 }
