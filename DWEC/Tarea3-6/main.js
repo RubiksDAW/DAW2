@@ -93,11 +93,20 @@ function extraerValor(str) {
         }
         
     }
-    // SOLUCION MÁS OPTIMA
-    // return str.replace(/[€.]/g, '')
+    
     return nuevaStr;
     
 }
 
 console.log(extraerValor("€120."));
+
+
+ // SOLUCION MÁS OPTIMA
+// function extraerValorPlus(str) {
+
+   
+//     return str.replace(/[€.]/g, '')
+    
+// }
+
 
