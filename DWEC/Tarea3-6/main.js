@@ -3,7 +3,7 @@
 function cadenaAlterna(cadena) {
     let nuevaCadena = "";
     let longitud = cadena.length;
-    console.log(longitud);
+    
     for (let i = 0; i < longitud; i++) {
 
         if(i % 2 == 0){
@@ -19,7 +19,7 @@ function cadenaAlterna(cadena) {
 
 console.log(cadenaAlterna("hola"));
 
-// Ejercicio 4 AÑADIR MAS PALABRAS
+// Ejercicio 4 
 
 function comprobarPalabra(cadena, palabra) {
 
@@ -63,8 +63,8 @@ function truncar(texto, longitud) {
 
         if (palabras[i].length >= longitud) {
 
-            nuevoTexto.push(palabras[i].substring(0, longitud - 1) + "...");
-            console.log(nuevoTexto);
+            nuevoTexto.push(palabras[i].substring(0, longitud ) + "...");
+            
 
         } else {
 
