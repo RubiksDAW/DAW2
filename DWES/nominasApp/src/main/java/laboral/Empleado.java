@@ -1,5 +1,7 @@
 package laboral;
 
+
+
 public class Empleado extends Persona {
 
     private int categoria;
@@ -47,5 +49,7 @@ public class Empleado extends Persona {
         System.out.println("Información empleado, nombre: " + super.nombre + " dni: " + super.dni + " sexo: "
                 + super.sexo + " categoria: " + this.categoria + " años trabajados: " + this.anyosTrabajados);
     }
+
+    
 
 }

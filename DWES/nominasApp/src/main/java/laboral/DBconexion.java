@@ -8,8 +8,6 @@ public class DBconexion {
     public static Connection conexion = null;
 	public static final String Url = "jdbc:mariadb://localhost:3306/nominas";
     
-//	private static final String Url = "jdbc:mysql://localhost:3306/classicmodels?user=root&password=root";
-
 	public static Connection getConnection() {
 		try {
 			if (conexion == null) {
