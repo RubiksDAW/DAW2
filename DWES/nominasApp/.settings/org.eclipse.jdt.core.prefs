@@ -41,10 +41,14 @@ org.eclipse.jdt.core.compiler.annotation.nullanalysis=disabled
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 org.eclipse.jdt.core.compiler.codegen.lambda.genericSignature=do not generate
 org.eclipse.jdt.core.compiler.codegen.methodParameters=do not generate
+<<<<<<< HEAD
 org.eclipse.jdt.core.compiler.codegen.shareCommonFinallyBlocks=disabled
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=17
+=======
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
+>>>>>>> 66ec9db3eafbd727fbb7109fb757885b4f51c62d
 org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve
-org.eclipse.jdt.core.compiler.compliance=17
+org.eclipse.jdt.core.compiler.compliance=1.7
 org.eclipse.jdt.core.compiler.debug.lineNumber=generate
 org.eclipse.jdt.core.compiler.debug.localVariable=generate
 org.eclipse.jdt.core.compiler.debug.sourceFile=generate
@@ -169,6 +173,7 @@ org.eclipse.jdt.core.compiler.problem.unusedWarningToken=warning
 org.eclipse.jdt.core.compiler.problem.varargsArgumentNeedCast=warning
 org.eclipse.jdt.core.compiler.processAnnotations=disabled
 org.eclipse.jdt.core.compiler.release=disabled
+<<<<<<< HEAD
 org.eclipse.jdt.core.compiler.source=17
 org.eclipse.jdt.core.compiler.storeAnnotations=disabled
 org.eclipse.jdt.core.compiler.taskCaseSensitive=enabled
@@ -574,3 +579,6 @@ org.eclipse.jdt.core.incompatibleJDKLevel=ignore
 org.eclipse.jdt.core.incompleteClasspath=error
 org.eclipse.jdt.core.javaFormatter=org.eclipse.jdt.core.defaultJavaFormatter
 org.eclipse.jdt.core.timeoutForParameterNameFromAttachedJavadoc=50
+=======
+org.eclipse.jdt.core.compiler.source=1.7
+>>>>>>> 66ec9db3eafbd727fbb7109fb757885b4f51c62d

@@ -16,6 +16,8 @@ public class Nomina {
         return sueldo;
     }
 
+    
+
     public static void Leer() {
         File doc = null;
         FileReader fr = null;
@@ -46,6 +48,7 @@ public class Nomina {
 
         FileWriter fichero = null;
         PrintWriter pw = null;
+
         try
         {
             // Debemos especificar la ruta, quizás añadir una variable 
