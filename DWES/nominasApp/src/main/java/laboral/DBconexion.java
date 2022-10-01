@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * It's a singleton class that returns a connection to the database
+ */
 public class DBconexion {
     public static Connection conexion = null;
 	public static final String Url = "jdbc:mariadb://localhost:3306/nominas";

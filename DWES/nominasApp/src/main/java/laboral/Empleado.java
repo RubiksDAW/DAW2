@@ -2,6 +2,9 @@ package laboral;
 
 
 
+/**
+ * The class Empleado extends the class Persona and adds the attributes categoria and anyosTrabajados
+ */
 public class Empleado extends Persona {
 
     private int categoria;

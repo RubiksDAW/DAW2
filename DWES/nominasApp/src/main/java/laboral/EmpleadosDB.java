@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.Thread.State;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,6 +15,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * It connects to the database, creates a statement, executes a query, and returns a list of employees
+ */
 public class EmpleadosDB {
 
     /**
@@ -25,7 +28,7 @@ public class EmpleadosDB {
      * @return A list of employees.
      */
     public static List<Empleado> getEmpleados() {
-        // Conexón a la base de datos
+        
         Connection conexion = DBconexion.getConnection();
         Statement st = null;
         ResultSet rs = null;
@@ -134,8 +137,17 @@ public class EmpleadosDB {
         }
     }
 
-    // Nos crea una instancia de nuestro clase empleado y una vez creada nos la
-    // inserta en la bbdd
+    /**
+     * This function creates an employee object and then calls the function that
+     * adds the employee to
+     * the database
+     * 
+     * @param nombre    String
+     * @param dni       String
+     * @param sexo      'H' or 'M'
+     * @param categoria 1-5
+     * @param anyos     years of experience
+     */
     public static void altaEmpleado(String nombre, String dni, char sexo, int categoria, int anyos) {
         try {
             Empleado emp = new Empleado(nombre, dni, sexo, categoria, anyos);
@@ -171,11 +183,14 @@ public class EmpleadosDB {
 
                 // Checking how many parameters are in the input file
 
-                if (datos.length == 3)
+                if (datos.length == 3) {
                     emp = new Empleado(datos[0], datos[1], datos[2].toCharArray()[0]);
-                else
+                }
+
+                else {
                     emp = new Empleado(datos[0], datos[1], datos[2].toCharArray()[0], Integer.parseInt(datos[3]),
                             Integer.parseInt(datos[4]));
+                }
 
                 altaEmpleado(emp);
                 backup(emp);
@@ -194,7 +209,7 @@ public class EmpleadosDB {
     public static void backup(Empleado emp) {
 
         // Creating a new file called empleadosBackup.txt in the specified path.
-        File backup = new File("C:\\Users\\Alejandro\\Desktop\\empleadosBackup.txt");
+        File backup = new File("empleadosBackup.txt");
         FileWriter fw = null;
         BufferedWriter bw = null;
         try {
@@ -234,21 +249,44 @@ public class EmpleadosDB {
         return exists;
     }
 
-    public static void updateEmpleado(Empleado emp) {
-        // Conexón a la base de datos
+    // public static void updateEmpleado(Empleado emp) {
+
+    //     Connection con = DBconexion.getConnection();
+    //     Statement st = null;
+
+    //     try {
+    //         st = con.createStatement();
+    //         System.out.println("update empleados emp set emp.nombre='" + emp.nombre + "' , emp.sexo='" + emp.sexo
+    //                 + "' , emp.categoria=" + emp.getCategoria() + " , emp.anyos=" + emp.anyosTrabajados
+    //                 + " where emp.dni='" + emp.dni + "'");
+
+    //         st.execute("update empleados emp set emp.nombre='" + emp.nombre + "' , emp.sexo='" + emp.sexo
+    //                 + "' , emp.categoria=" + emp.getCategoria() + " , emp.anyos=" + emp.anyosTrabajados
+    //                 + " where emp.dni='" + emp.dni + "'");
+
+    //         st.execute("update nominas set sueldo=" + Nomina.sueldo(emp) + " where dni='" + emp.dni + "'");
+
+    //     } catch (SQLException ex) {
+    //         ex.printStackTrace();
+    //     }
+    // }
+
+    /**
+     * It updates the name of an employee in the database, and then updates the
+     * salary of the employee
+     * in the database
+     * 
+     * @param emp is an object of the class Empleado
+     */
+    public static void updateEmpleadoNombre(Empleado emp) {
         Connection con = DBconexion.getConnection();
         Statement st = null;
 
         try {
             st = con.createStatement();
-            System.out.println("update empleados emp set emp.nombre='" + emp.nombre + "' and emp.sexo='" + emp.sexo
-                    + "' and emp.categoria=" + emp.getCategoria() + " and emp.anyos=" + emp.anyosTrabajados
-                    + " where emp.dni='" + emp.dni + "'");
-            
-            st.execute("update empleados emp set emp.nombre='" + emp.nombre + "' and emp.sexo='" + emp.sexo
-                    + "' and emp.categoria=" + emp.getCategoria() + " and emp.anyos=" + emp.anyosTrabajados
-                    + " where emp.dni='" + emp.dni + "'");
-           
+
+            st.execute("update empleados set nombre=" + "'" + emp.nombre + "'" + " where dni=" + "'" + emp.dni + "'");
+
             st.execute("update nominas set sueldo=" + Nomina.sueldo(emp) + " where dni='" + emp.dni + "'");
 
         } catch (SQLException ex) {
@@ -256,8 +294,64 @@ public class EmpleadosDB {
         }
     }
 
+    public static void updateEmpleadoSexo(Empleado emp) {
+        Connection con = DBconexion.getConnection();
+        Statement st = null;
+
+        try {
+            st = con.createStatement();
+
+            st.execute("update empleados set sexo=" + "'" + emp.sexo + "'" + " where dni=" + "'" + emp.dni + "'");
+
+            st.execute("update nominas set sueldo=" + Nomina.sueldo(emp) + " where dni='" + emp.dni + "'");
+
+        } catch (SQLException ex) {
+
+            ex.printStackTrace();
+
+        }
+    }
+
+    public static void updateEmpleadoCategoria(Empleado emp) {
+        Connection con = DBconexion.getConnection();
+        Statement st = null;
+
+        try {
+            st = con.createStatement();
+
+            st.execute("update empleados set categoria=" + "'" + emp.getCategoria() + "'" + " where dni=" + "'"
+                    + emp.dni + "'");
+
+            st.execute("update nominas set sueldo=" + Nomina.sueldo(emp) + " where dni='" + emp.dni + "'");
+
+        } catch (SQLException ex) {
+
+            ex.printStackTrace();
+
+        }
+    }
+
+    public static void updateEmpleadoAnyos(Empleado emp) {
+        Connection con = DBconexion.getConnection();
+        Statement st = null;
+
+        try {
+            st = con.createStatement();
+
+            st.execute("update empleados set anyos=" + "'" + emp.anyosTrabajados + "'" + " where dni=" + "'" + emp.dni
+                    + "'");
+
+            st.execute("update nominas set sueldo=" + Nomina.sueldo(emp) + " where dni='" + emp.dni + "'");
+
+        } catch (SQLException ex) {
+
+            ex.printStackTrace();
+
+        }
+    }
+
     public static void updateSueldo(String dni) {
-        // Conexón a la base de datos
+
         Connection con = DBconexion.getConnection();
         Statement st = null;
         try {

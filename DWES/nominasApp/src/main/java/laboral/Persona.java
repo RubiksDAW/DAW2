@@ -1,5 +1,8 @@
 package laboral;
 
+/**
+ * A class that represents a person
+ */
 public class Persona {
 	
 	public String nombre;

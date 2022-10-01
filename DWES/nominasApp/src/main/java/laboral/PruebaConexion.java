@@ -8,9 +8,9 @@ public class PruebaConexion {
     public static void main(String[] args) {
         DBconexion.getConnection();
         // EmpleadosDB.getEmpleados();
-        // // Tengo que revisar la bbdd porque la tabla nominas está vacia.
-        // EmpleadosDB.altaEmpleado("Maria", "30233243Q", 'F', 2, 2);
-        EmpleadosDB.altaEmpleado("C:\\Users\\Alejandro\\Desktop\\empleadosNuevos.txt");
+        Nomina.Leer();
+        // EmpleadosDB.altaEmpleado("MariaLuisa", "30239243Q", 'F', 2, 2);
+        EmpleadosDB.altaEmpleado("C:\\DATA\\DAW2\\DAW2\\DWES\\nominasApp\\empleadosNuevos.txt");
 
     }
 }

@@ -1,5 +1,8 @@
 package laboral;
 
+/**
+ * The class CalculaNominas is a class that calculates the salary of an employee
+ */
 public class CalculaNominas {
 
     private static void escribe(Empleado emp) {
@@ -14,8 +17,8 @@ public class CalculaNominas {
 
         try {
 
-            Empleado emp1 = new Empleado("James", "3200032G", 'M', 4, 7);
-            Empleado emp2 = new Empleado("Ada Lovelace", "32000031R", 'F');
+            // Empleado emp1 = new Empleado("James", "3200032G", 'M', 4, 7);
+            // Empleado emp2 = new Empleado("Ada Lovelace", "32000031R", 'F');
 
             // Escribimos la información del sueldo en nuestro archivo sueldos.dat
             // Nomina.Escribir(emp1);
