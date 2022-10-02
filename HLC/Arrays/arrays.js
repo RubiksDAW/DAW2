@@ -48,11 +48,11 @@ let personas = [{
 
 //.forEach() Este metodo recorre todo el array como fi fuera un "for", permite ejecutar un metodo o leer una propiedad por cada elemento del array
 
-personas.forEach(persona =>{
+personas.forEach(persona => {
     console.log(`${persona.nombre} tiene ${persona.edad} años`);
 })
 
-personas.filter(elemento =>{
+personas.filter(elemento => {
 
     return elemento.nombre == 'Marco';
 
@@ -61,7 +61,17 @@ personas.filter(elemento =>{
 console.log(personas);
 
 
+//// .every() sirve para comprobar si todos los elementos de un array cumplen una condición, de no ser así devuelve false
+//// .some() sirve para comprobar si alguno de los elementos del array cumple una condicion, de no ser así devuelve false
+//// .find() devuelve el primer elemento encontrado que cumple con la condición especificada.
+//// .reverse() le da la vuelta al array y cambia el orden de sus posiciones
 
+
+//// .sort() ordena el array. Debemos indicar la condicion para ordenar.
+
+//// personas.sort((a,b) => {
+//// return a.experiencia - b.experiencia
+//// })
 
 
 
