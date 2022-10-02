@@ -25,9 +25,10 @@ let personas = [{
 // .concat() Concatena dos arrys y añade el nuevo array o elemento al final
 
 // .splice(posicionInicioBorrado,numeroElementosBorrar,nuevoElementoInsertar) Nos elimina elementos de un array a partir de los parametros que
-//   se le pasen. Si le digo desde la posición dos y solo borras UNO solo borrará la posición 2
+//  se le pasen. Si le digo desde la posición dos y solo borras UNO solo borrará la posición 2
 
 // .slice(elementoInicio,elementoFin) elimina desde el elemento inicial que indiquemos hasta el elemento final (No incluido)
+// Valor de retorno --> Un nuevo array con los valores extraídos.
 
 // .filter() nos devuelve el mismo array con los elementos filtrados 
 
@@ -48,17 +49,17 @@ let personas = [{
 
 //.forEach() Este metodo recorre todo el array como fi fuera un "for", permite ejecutar un metodo o leer una propiedad por cada elemento del array
 
-personas.forEach(persona => {
-    console.log(`${persona.nombre} tiene ${persona.edad} años`);
-})
+// personas.forEach(persona => {
+//     console.log(`${persona.nombre} tiene ${persona.edad} años`);
+// })
 
-personas.filter(elemento => {
+// personas.filter(elemento => {
 
-    return elemento.nombre == 'Marco';
+//     return elemento.nombre == 'Marco';
 
-})
+// })
 
-console.log(personas);
+// console.log(personas);
 
 
 //// .every() sirve para comprobar si todos los elementos de un array cumplen una condición, de no ser así devuelve false
@@ -74,6 +75,13 @@ console.log(personas);
 //// })
 
 
+let numeros = ["julio", "manuel", "alejandro","maria", "bruno"];
+
+let refran = "gato loco pocos mocos";
+
+let descom = refran.split(' ')
+
+console.log(descom);
 
 
 
