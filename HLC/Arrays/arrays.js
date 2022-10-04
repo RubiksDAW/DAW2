@@ -75,14 +75,13 @@ let personas = [{
 //// })
 
 
-let numeros = ["julio", "manuel", "alejandro","maria", "bruno"];
+let nombres = ["julio", "manuel", "alejandro","maria", "bruno"];
 
-let refran = "gato loco pocos mocos";
+let nombresModi = nombres.splice(0,1,"Manuel");
 
-let descom = refran.split(' ')
+console.log(nombresModi);
 
-console.log(descom);
-
+console.log(nombres);
 
 
 
