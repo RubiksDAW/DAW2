@@ -21,8 +21,8 @@ function lanzar() {
 
     for (let i = 0; i < 10; i++) {
 
-        dado1 = Math.floor(Math.random() * 7 + 0);
-        dado2 = Math.floor(Math.random() * 7 + 0);
+        dado1 = Math.floor(Math.random() * 7 + 1);
+        dado2 = Math.floor(Math.random() * 7 + 1);
 
         document.getElementById("dado1").setAttribute('placeholder', dado1)
         document.getElementById("dado2").setAttribute('placeholder', dado2)
@@ -98,18 +98,6 @@ function contarResultados(resultados) {
     <p>El numero 10 ha salido:  ${diez}</p>
     <p>El numero 11 ha salido:  ${once}</p>
     <p>El numero 12 ha salido:  ${doce}</p>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     `
 
 }
