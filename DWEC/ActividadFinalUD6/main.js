@@ -8,7 +8,7 @@ function Vehiculo(marca, modelo, color, anio) {
 
 //f Crear el método mostrarDatos.
 Vehiculo.prototype.mostrarDatos = function () {
-    
+
     console.log(this.marca);
     console.log(this.modelo);
     console.log(this.color);
@@ -40,7 +40,13 @@ Vehiculo.prototype.arrancar = function () {
 
 //i Asignar una nueva propiedad cilindrada.
 
-Vehiculo.prototype.cilindrada = "120";
+Object.defineProperty(Vehiculo, "cilindrada", {
+    writable: false,
+    configurable: false
+})
+
+console.log("Hemos añadido una propiedad");
+console.log(Vehiculo);
 
 //j Asignar un nuevo método frenar. Mostrará por pantalla que el coche de marca_, modelo_, color_ha parado)
 
@@ -74,10 +80,19 @@ Mercedes.arrancar()
 
 // Creamos un metodo que establecerá por defecto el modelo de nuestro vehiculo 
 
-Mercedes.modelo = "xx"
+Object.defineProperty(Mercedes, "marca", {
+    writable: false,
+    //configurable nos permite eliminar o no la propiedad segun true / false
+    configurable: true
+})
+// ¿COMO DEFINIR VALOR PREDETERMINADO?
+
+Object.defineProperty(Mercedes, "modelo", {
+    writable: false,
+    configurable: false
+})
 
 
-Object.freeze(Mercedes) // Hacemos uso del metodo freeze de Object para congelar una instancia 
 
 console.log("--------------");
 
@@ -92,13 +107,15 @@ console.log(Mercedes.modelo);
 
 // m Muestra todas las propiedades de Objeto1 utilizando: for in , Object.hasOwnPropertyNames(),
 // Object.keys().
-console.log("Imprimimos con un for in las propiedades");
+console.log("Imprimimos con un for in las propiedades de Mercedes");
 for (const key in Mercedes) {
     if (Object.hasOwnProperty.call(Mercedes, key)) {
         const element = Mercedes[key];
         console.log(element);
     }
 }
+
+
 
 
 
