@@ -54,12 +54,54 @@ let facturaPrueba = new Factura(clie,[elem1,elem2],info)
 console.log(facturaPrueba);
 
 
-Factura.prototype.Empresa = Empresa;
+
 
 console.log(Factura);
-let emp = new Empresa("Zara","Amancio",57584774,"344423Q");
-
 
 
 
 console.log(Factura);
+Factura.prototype.calcularIVA = function calcularIVA() {
+    let precioArticulos = 0;
+
+    for (let i = 0; i < this.elementos.length; i++) {
+        const element = this.elementos[i].precio;
+        precioArticulos += element
+        
+    }
+
+    let precioIVA = precioArticulos * this.info.iva + precioArticulos;
+
+    Object.defineProperty(Factura,"precioConIVA", Factura,precioIVA);
+
+    
+}
+
+console.log(Factura);
+
+Factura.prototype.mostrarIVA = function mostrarIVA() {
+    let precioArticulos = 0;
+
+    for (let i = 0; i < this.elementos.length; i++) {
+        const element = this.elementos[i].precio;
+        precioArticulos += element
+        
+    }
+
+    let precioIVA = precioArticulos * this.info.iva + precioArticulos;
+   
+    console.log(`El precio total de la compra ha sido de ${precioIVA} euros`);
+    return precioIVA;
+}
+
+facturaPrueba.calcularIVA();
+
+let precioFinal = facturaPrueba.mostrarIVA()
+
+console.log(precioFinal);
+
+facturaPrueba.precioIVA = precioFinal
+
+console.log(facturaPrueba);
+
+
