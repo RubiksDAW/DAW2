@@ -306,6 +306,26 @@ console.log(getLastDayOfMonth(2022,4));
 
 // Tarea 19
 
+function getSecondsToday() {
+  let d = new Date();
+  return d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds();
+}
 
+alert(getSecondsToday());
 
+// Tarea 20 
 
+function getSecondsToTomorrow() {
+  let fecha = new Date();
+  let hora = fecha.getHours();
+  let minutos = fecha.getMinutes();
+  let segundos = fecha.getSeconds();
+  let segundosEnUnDia = (hora * 60 + minutos) * 60 + segundos;
+  let totalSegundos = 86400;
+
+  return totalSegundos - segundosEnUnDia;
+}
+
+// Tarea 21 
+
+// Tarea 22 

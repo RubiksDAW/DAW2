@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>ALEJANDRO login</title>
+    <script>
+        function auth() {
+            var xhttp = new XMLHttpRequest();
+            var user = document.getElementById('user').value;
+            var pass = document.getElementById('pass').value;
+            var data = "user=" + user + "&pass=" + pass;
+            xhttp.onreadystatechange = function () {
+
+                if (this.readyState == 4 && this.status ==
+                    200) {
+                    let obj = JSON.parse(this.responseText);
+                    //alert(obj.debug);
+                    document.getElementById("login").style.display = "none";
+                    document.getElementById("bienvenida").style.display = "block";
+                    const nodo = document.createElement("h1");
+                    const usuario = document.createTextNode("BIENVENIDO/A " + obj.cn.toUpperCase());
+                    nodo.appendChild(usuario);
+                    document.getElementById("bienvenida").appendChild(nodo);
+                }
+
+            };
+
+            xhttp.open("POST", "ldap.php", true);
+            xhttp.setRequestHeader("Content-type", "application/x-www - form - urlencoded");
+            xhttp.send(data);
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="login">
+        <center>
+            <form method="POST">
+                <table>
+                    <tr>
+                        <td>Usuario:</td>
+                        <td><input id="user" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Contraseña:</td>
+                        <td><input id="pass" type="password" onkeydown="if (event.keyCode == 13) auth()"></td>
+                    </tr>
+                </table>
+                <br /><input type="button" name="login" value="Login" onclick="auth()">
+        </center>
+        </form>
+    </div>
+    <div id="bienvenida" style="display:none">
+    </div>
+</body>
