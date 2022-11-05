@@ -37,6 +37,7 @@ function Empresa(nombre,direccion,telefono,cif) {
     this. cif = cif;
 
 }
+
 let clie = new Cliente("Alejandro","aledelarosa@gmail.com",676886768,"3023442Q");
 
 let elem1 = new Elemento("coche electrico",1,3000);
@@ -57,6 +58,7 @@ console.log(facturaPrueba);
 Factura.prototype.Empresa = Empresa;
 
 console.log(Factura);
+
 let emp = new Empresa("Zara","Amancio",57584774,"344423Q");
 
 
