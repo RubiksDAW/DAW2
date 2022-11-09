@@ -58,11 +58,8 @@ console.log(facturaPrueba);
 
 
 console.log(Factura);
-<<<<<<< HEAD
 
 let emp = new Empresa("Zara","Amancio",57584774,"344423Q");
-=======
->>>>>>> 97008009373247c9dedacf86ad9eda14dac06cb6
 
 
 
