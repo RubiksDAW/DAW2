@@ -7,22 +7,22 @@ class Vehiculo {
     }
 }
 
-class Furgoneta extends Vehiculo{
-    constructor(nombre,matricula,pasajeros) {
-        super(nombre,matricula)
+class Furgoneta extends Vehiculo {
+    constructor(nombre, matricula, pasajeros) {
+        super(nombre, matricula)
         this.pasajeros = pasajeros;
     }
 }
 
-class Todoterreno extends Vehiculo{
-    constructor(nombre,matricula,traccion) {
-        super(nombre,matricula)
+class Todoterreno extends Vehiculo {
+    constructor(nombre, matricula, traccion) {
+        super(nombre, matricula)
         this.traccion = traccion;
     }
 }
 
-let coche1 = new Furgoneta("Renault","34FKC",3)
-let coche2 = new Todoterreno("VOLVO", "30KJD",true)
+let coche1 = new Furgoneta("Renault", "34FKC", 3)
+let coche2 = new Todoterreno("VOLVO", "30KJD", true)
 
 console.log(coche1);
 console.log(coche2);
@@ -37,7 +37,7 @@ class Persona {
         this.genero = genero;
     }
 
-    obtDetalles(){
+    obtDetalles() {
 
         return `El nombre es: ${this.nombre}, la edad: ${this.edad} y el genero es: ${this.genero}`
 
@@ -45,20 +45,20 @@ class Persona {
 
 }
 
-class Estudiante extends Persona{
+class Estudiante extends Persona {
 
-    constructor(nombre,edad,genero,curso,grupo) {
-        super(nombre,edad,genero)
+    constructor(nombre, edad, genero, curso, grupo) {
+        super(nombre, edad, genero)
         this.curso = curso;
         this.grupo = grupo;
     }
 
-    registrar(){
+    registrar() {
 
         console.log(`Esto es un registro realizado por ${this.nombre}`);
     }
 
-    obtDetalles(){
+    obtDetalles() {
 
         return `El nombre es: ${this.nombre}, la edad: ${this.edad} y el genero es: ${this.genero}`
 
@@ -66,20 +66,20 @@ class Estudiante extends Persona{
 
 }
 
-class Profesor extends Persona{
+class Profesor extends Persona {
 
-    constructor(nombre,edad,genero,asignatura,nivel) {
-        super(nombre,edad,genero)
+    constructor(nombre, edad, genero, asignatura, nivel) {
+        super(nombre, edad, genero)
         this.asignatura = asignatura;
         this.nivel = nivel;
     }
 
-    asignar(){
+    asignar() {
 
         console.log(`Esto es el metodo asignar realizado por ${this.nombre}`);
     }
 
-    obtDetalles(){
+    obtDetalles() {
 
         return `El nombre es: ${this.nombre}, la edad: ${this.edad} y el genero es: ${this.genero}`
 
@@ -88,8 +88,8 @@ class Profesor extends Persona{
 }
 
 let persona = new Persona("Manuel", 12, "Femenino");
-let persona2 = new  Estudiante("Maria",23,"Masculino","Segundo","B")
-let persona3 = new Profesor("Bruno",40,"Masculino","DWEC","Alto")
+let persona2 = new Estudiante("Maria", 23, "Masculino", "Segundo", "B")
+let persona3 = new Profesor("Bruno", 40, "Masculino", "DWEC", "Alto")
 
 console.log(persona);
 console.log(persona.obtDetalles());
@@ -98,6 +98,46 @@ console.log(persona2.obtDetalles());
 console.log(persona3);
 console.log(persona3.asignar());
 
+// Ejercicio 7 del taller final de la unidad 6
 
+class Empleado {
+    constructor(nombre = '', departamento = "General") {
+        this.nombre = nombre;
+        this.departamento = departamento;
 
+    }
+}
+
+class Director extends Empleado {
+
+    constructor(nombre = '', departamento = "General", informes = []) {
+        super(nombre, departamento)
+        this.informes = informes;
+    }
+
+}
+
+class Ingeniero extends Empleado {
+    constructor(nombre = '', departamento = "Ingeniería", proyectos = []) {
+        super(nombre, departamento)
+        this.proyectos = proyectos;
+    }
+
+}
+
+let empleado1 = new Director();
+
+empleado1.nombre = "Manuel"
+
+empleado1.informes = ["informe1", "informe2"]
+
+let empleado2 = new Ingeniero();
+
+empleado2.nombre = "Miguel"
+
+empleado2.proyectos = ["proyecto1", "proyecto2"]
+
+console.log(empleado1);
+
+console.log(empleado2);
 
