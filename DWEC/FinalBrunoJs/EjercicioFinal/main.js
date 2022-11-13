@@ -15,7 +15,9 @@ const getAll = async () => {
 
         if(!res.ok)throw {status:res.status, statusText: res.statusText}
         console.log(json);
-    
+        
+        
+
     } catch (error) {
         console.log(error);
     }
