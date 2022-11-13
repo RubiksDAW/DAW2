@@ -11,19 +11,6 @@
     <h1>CRUD API REST FETCH</h1>
     <section class="crud">
         <article>
-            <h2 class="crud-title">Agregar Usuario</h2>
-            <form class="crud-form">
-                <input type="text" name="nombre" placeholder="nombre" required>
-                <br>
-                <input type="text" name="correo" placeholder="correo" required>
-                <br>
-                <input type="text" name="imagen">
-                <br>
-                <input type="submit" value="Enviar">
-                <input type="hidden" name="id">
-            </form>
-        </article>
-        <article>
             <h2>Ver Usuarios</h2>
             <table class="crud-table">
                 <thead>
@@ -36,18 +23,34 @@
                 <tbody></tbody>
             </table>
         </article>
+
+        <article>
+            <h2 class="crud-title">Agregar Usuario</h2>
+            <form class="crud-form">
+                <input type="text" name="nombre" placeholder="nombre" required>
+                <br>
+                <input type="text" name="correo" placeholder="correo" required>
+                <br>
+                <input type="text" name="imagen" placeholder="url imagen">
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="hidden" name="id">
+            </form>
+        </article>
+
     </section>
     <template id="crud-template">
         <tr>
             <td class="name"></td>
             <td class="correo"></td>
+            <td class="imagen"></td>
             <td>
                 <button class="edit">Editar</button>
                 <button class="delete">Eliminar</button>
             </td>
         </tr>
     </template>
-
+<script src="main.js"></script>
 </body>
 
 </html>
