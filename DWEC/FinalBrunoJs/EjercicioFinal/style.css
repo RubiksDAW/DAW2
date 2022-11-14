@@ -1,0 +1,20 @@
+#crud-usuarios {
+    background-color: antiquewhite;
+    border: solid 1px;
+    width: 100%;
+}
+
+.marco {
+    border: solid 1px;
+    width: 25%;
+    display: inline-block;
+}
+
+.marco p {
+    text-align: center;
+}
+
+.marco img {
+    display: block;
+    margin: auto;
+}

@@ -1,4 +1,3 @@
-
 const panelUsuarios = document.getElementById("crud-usuarios")
 const form = document.getElementById("crud-form")
 const title = document.getElementById("crud-title")
@@ -15,32 +14,50 @@ const getAll = async () => {
 
         if (!res.ok) throw { status: res.status, statusText: res.statusText }
 
-        console.log(res.status);
-        console.log(json);
+        console.log(json.data);
 
-        Object.entries(json.data).forEach(elem => {
+        json.data.forEach(elem => {
+            //Guardamos los elementos del objeto en sus etiquetas HTML
+            let nombre = document.createElement("p")
+            nombre.textContent = elem.first_name
 
-            console.log(elem);
+            let mail = document.createElement("p")
+            mail.textContent = elem.email
 
-            console.log(template);
-            template.getElementsByClassName("nombre").textContent = elem[1].first_name;
-            template.getElementsByClassName("correo").textContent = elem[1].email;
-            template.getElementsByClassName("img").textContent = elem[1].avatar;
+            let img = document.createElement("img")
+            img.setAttribute("src",elem.avatar)
 
-            let clone = document.importNode(template, true)
+            let eliminar = document.createElement("button")
+            let editar = document.createElement("button")
 
-            fragment.appendChild(clone)
+            eliminar.textContent = "Eliminar"
+            editar.textContent = "Editar"
+
+            let marco = document.createElement("div")
+            marco.setAttribute("class", "marco")
+            marco.append(nombre)
+            marco.append(mail)
+            marco.append(img)
+            marco.append(eliminar)
+            marco.append(editar)
+            
+            panelUsuarios.append(marco)
+            console.log(nombre);
+            console.log(mail);
+            console.log(img);
+
+            //   panelUsuarios.append(nombre)
+            //   panelUsuarios.append(mail)
+            //   panelUsuarios.append(img)
 
         })
-
-        panelUsuarios.appendChild(fragment)
-
-
 
     } catch (error) {
         console.log(error);
     }
 }
+
+
 
 document.addEventListener("DOMContentLoaded", getAll)
 
