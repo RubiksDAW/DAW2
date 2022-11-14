@@ -1,13 +1,19 @@
 #crud-usuarios {
-    background-color: antiquewhite;
     border: solid 1px;
     width: 100%;
 }
 
 .marco {
+    display: inline-block;
+    background-color: antiquewhite;
     border: solid 1px;
     width: 25%;
-    display: inline-block;
+    
+}
+
+.marco button{
+    display: block;
+    margin: auto;
 }
 
 .marco p {
