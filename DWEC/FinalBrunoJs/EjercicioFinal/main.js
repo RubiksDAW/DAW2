@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", getAll)
 
 document.addEventListener('submit', async e => {
 
+    console.log("hola");
 
     if (e.target === form) {
         e.preventDefault()
@@ -87,8 +88,8 @@ document.addEventListener('submit', async e => {
                     body: JSON.stringify({
 
                         nombre: e.target.nombre.value,
-                        nombre: e.target.correo.value,
-                        nombre: e.target.imagen.value
+                        correo: e.target.correo.value,
+                        imagen: e.target.imagen.value
 
                     })
                 }
@@ -182,10 +183,39 @@ document.addEventListener("click", async e => {
         e.target.parentElement.children[2].src = form[2].value
 
         console.log(e.target.parentElement);
-        console.log();
+
+        let configObject = {
+            method: "PATCH",                    
+            headers: {
+              "Content-Type": "application/json"    
+            },
+
+            body: JSON.stringify(       
+
+              {
+
+                nombre: e.target.parentElement.children[0].textContent,
+                correo: e.target.parentElement.children[1].textContent,
+                imagen: e.target.parentElement.children[2].src
+
+              }
+            )
+            
+          };
+
+          
+          let res = await fetch('https://reqres.in/api/users/', configObject)
+            let json = await res.json();
+        console.log(json);
         
     }
 
     // console.log(e.target);
 
 })
+
+
+
+
+
+
