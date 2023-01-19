@@ -23,6 +23,11 @@ h1,h2{
     margin: auto;
 }
 
+#bttn-foto{
+    display: block;
+    margin: auto;
+}
+
 .marco p {
     text-align: center;
 }
