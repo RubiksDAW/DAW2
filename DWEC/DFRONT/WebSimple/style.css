@@ -72,16 +72,9 @@ span {
 }
 
 .menu ul li a {
-  font-family: Georgia, serif;
-font-size: 20px;
-letter-spacing: 2px;
-word-spacing: 2px;
-color: #000000;
-font-weight: 700;
-text-decoration: rgb(68, 68, 68);
-font-style: italic;
-font-variant: small-caps;
-text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  text-decoration: none;
   /* border: 1px solid green; */
   background:
     linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)),
