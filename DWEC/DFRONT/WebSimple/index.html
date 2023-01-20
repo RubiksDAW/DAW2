@@ -19,41 +19,118 @@
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Comprar</a></li>
             <li><a href="#">Vender</a></li>
-            <li><a href="#"> Contacto</a></li>
+            <li><a href="#contacto"> Contacto</a></li>
         </ul>
     </nav>
 
     <div class="hero-image">
         <div class="hero-text">
-          <h1>Alejandro De la Rosa</h1>
-          <p> web Developer</p>
-          <button>GitHub</button>
+          <h1>Atención al cliente 24 horas</h1>
+          <p> Devoluciones 100% gratuitas</p>
+          <button>Contactar</button>
         </div>
       </div> 
-
-    <div class="contenedor">
+      <div class="contenedor">
+        <h2 class="destacadas">CATEGORIAS DESTACADAS</h2>
+        </div>
+    <div class="contenedor-destacados">
+        
         <div class="categoria">
             <img src="imagenes/motor.jpg" alt="motor">
-            <p class="descripcion">Aqui podrás encontrar lo ultimo en motor</p>
+            <p class="descripcion">Motor</p>
         </div>
         <div class="categoria">
-            <img src="imagenes/ordenadores.jpg" alt="ordenadores">
-            <p class="descripcion">Aqui podrás encontrar lo ultimo en ordenadores</p>
+            <img src="imagenes/ordena.jpg" alt="ordenadores">
+            <p class="descripcion">Informática</p>
         </div>
         <div class="categoria">
             <img src="imagenes/ropa.webp" alt="ropa">
-            <p class="descripcion">Aqui podrás encontrar lo ultimo en moda</p>
+            <p class="descripcion">Ropa</p>
+        </div>
+    </div>
+    <div class="contenedor">
+        <h2 class="destacadas">Reseñas de nuestros usuarios</h2>
+    </div>
+    <div class="reviews">
+        
+        <!-- <div class="review">
+            <h3 class="autor">Roberto</h3>
+            <p class="comentario"><cite>"Mi experiencia de compra fue muy agradable, repetiré 100%. Sois los mejores."</cite></p>
+        </div> -->
+        <div class="review">
+            <h3 class="autor">Miguel</h3>
+            <p class="comentario"><cite>"No tuve ningún problema a la hora de devolver el producto. Volveré a comprar"</cite></p>
+        </div>
+        <div class="review">
+            <h3 class="autor">Ainara</h3>
+            <p class="comentario"><cite>"Aún no estás convencido de comprar aquí? Corre a por la cartera de tu abuela."</cite></p>
+        </div>
+        <div class="review">
+            <h3 class="autor">Aitor </h3>
+            <p class="comentario"><cite>"La mejor decisión de mi vida después de tener invertir en Dogecoin"</cite></p>
         </div>
     </div>
 
-    <!-- <div class="info">
-        <aside></aside>
-        <div class="informacion">
-            <p>Nuestros años de experiencia nos avalan con más de <span>30.000 transacciones</span></p>
-        </div>
-    </div> -->
+    <div id="contacto"class="contacto">
 
-    <!-- <footer>Copyright</footer> -->
+        <div class="formulario">      
+          <h1>Formulario de contacto</h1>
+            <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+    
+    
+              <form action="#" method="post">       
+    
+                
+                    <p>
+                      <label for="nombre" class="colocar_nombre">Nombre
+                        <span class="obligatorio">*</span>
+                      </label>
+                        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                    </p>
+                  
+                    <p>
+                      <label for="email" class="colocar_email">Email
+                        <span class="obligatorio">*</span>
+                      </label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                    </p>
+                
+                    <p>
+                      <label for="telefono" class="colocar_telefono">Teléfono
+                      </label>
+                        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                    </p>     
+                  
+                    <p>
+                      <label for="asunto" class="colocar_asunto">Asunto
+                        <span class="obligatorio">*</span>
+                      </label>
+                        <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                    </p>    
+                  
+                    <p>
+                      <label for="mensaje" class="colocar_mensaje">Mensaje
+                        <span class="obligatorio">*</span>
+                      </label>                     
+                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                    </p>                    
+                  
+                    <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+    
+                    <p class="aviso">
+                      <span class="obligatorio"> * </span>los campos son obligatorios.
+                    </p>          
+                
+              </form>
+        </div>  
+      </div>
+
+    <footer class="pie">
+        <a href="">Contacta</a>
+        <a href="">Twitter</a>
+        <a href="">Facebook</a>
+        <a href="">TikTok</a>
+    </footer>
 
 </body>
 
