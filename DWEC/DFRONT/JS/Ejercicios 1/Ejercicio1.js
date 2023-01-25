@@ -88,11 +88,20 @@ let programadores = [
 ];
 
 // console.log(programadores)
+// let horasTareas = programadores.map(m => m.tareas.map(t => t.tiempoDesarrollo))
+// console.log(horasTareas)
 
 
-let horasTareas = programadores.map(m => m.tareas.map(t => t.tiempoDesarrollo))
 
+for (let i = 0; i < programadores.length; i++) {
+  const tareas = programadores[i].tareas;
 
+  for (let u = 0; u < tareas.length; u++) {
+      
+      let
+    
+  }
 
-console.log(horasTareas)
-
+  
+  
+}
