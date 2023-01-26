@@ -15,7 +15,11 @@ let programadores = [
         idTarea: 1.2,
         tiempoDesarrollo: '10 horas',
       },
-      { nombreTarea: 'Tarea 1.3', idTarea: 1.3, tiempoDesarrollo: '2 horas' },
+      {
+        nombreTarea: 'Tarea 1.3',
+        idTarea: 1.3,
+        tiempoDesarrollo: '2 horas'
+      },
       {
         nombreTarea: 'Tarea 1.4',
         idTarea: 1.4,
@@ -91,17 +95,62 @@ let programadores = [
 // let horasTareas = programadores.map(m => m.tareas.map(t => t.tiempoDesarrollo))
 // console.log(horasTareas)
 
-
+// Declaramos un array vacio para ir guardando las
+let horasDesarrollo = []
+let maximo = 0;
+// Creamos una variable para guardar las tareas de los programadores
+let tareasProgramadores = []
 
 for (let i = 0; i < programadores.length; i++) {
+  
   const tareas = programadores[i].tareas;
-
+  tareasProgramadores.push(tareas)
   for (let u = 0; u < tareas.length; u++) {
-      
-      let
+
+    // Almacenamos las horas en un array 
+    horasDesarrollo.push(convertirString(tareas[u].tiempoDesarrollo))
     
   }
 
-  
-  
 }
+
+console.log("Estas son todas las tareas")
+console.log(tareasProgramadores)
+
+console.log("Estas son todas las horas de cada tarea")
+console.log(horasDesarrollo)
+
+// De todas las tareas obtenemos la que mayor horas requiere
+maximo = max(horasDesarrollo)
+
+console.log(maximo)
+
+
+
+
+function convertirString(arr) {
+  
+  let espacio = " ";
+
+  let horas = arr.split(espacio);
+
+  // numeroHorasEnNumeros.push(Number(numerosHoras[0]))
+
+  return Number(horas[0]);
+
+}
+
+
+function max(arr) {
+  let max = 0;
+
+  for (let index = 0; index < arr.length; index++) {
+
+    if (arr[index] > max) {
+      max = arr[index];
+    }
+
+  }
+  return max;
+}
+
