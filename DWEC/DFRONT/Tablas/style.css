@@ -1,4 +1,4 @@
-table{
+/* table{
     border: 1px solid black;
 }
 
@@ -8,14 +8,7 @@ table th{
 
 table td{
     border: solid 1px black;
-}
-
-table td p{
-    margin: 0 0 0 0 ;
-    border: 1px solid black;
-}
-
-
+} */
 
 .contenedor{
     display: flex;

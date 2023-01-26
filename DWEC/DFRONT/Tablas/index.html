@@ -8,60 +8,65 @@
     <title>Document</title>
   </head>
   <body>
-    <table align="center">
-      <tbody>
+    <section>
+      <table border="1px solid black">
         <caption>
           Etiquetas semánticas HTML
         </caption>
-        <tr>
-          <th>Elemento</th>
-          <th>Descripción</th>
-        </tr>
-        <tr>
-          <td>Header</td>
-          <td>
-            El HEADER suele llevar el titulo, la descripción corta y el logo de
-            la página. El HEADER por si mismo no separa contenidos, no se debe
-            utilizar aislado, sino dentro de otra etiqueta semántica, o a primer
-            nivel en el BODY
-          </td>
-        </tr>
-        <tr>
-          <td rowspan="2">Section</td>
-          <td>Representa una unidad de contenido, es decir contenido que responde a un tema concreto</td>
-        </tr>
-        <tr>
-          <td>Se puede anidar un ARTICLE dentro de otro</td>
-        </tr>
-        <tr>
-          <td>Footer</td>
-          <td>
-            Normalmente va al final de la página y contiene información del
-            tipo: autor, copyright, contacto, mapa del sitio, etc.
-          </td>
-        </tr>
-        <tr>
-          <th colspan="2">Navegaciones</th>
-        </tr>
-        <tr>
-          <td>Nav</td>
-          <td>
-            Esta etiqueta está pensada para contener la barra de navehgación o
-            los enlaces a las páginas del sitio web.
-          </td>
-        </tr>
-        <tr>
-          <td>Aside</td>
-          <td>
-            Esta etiqueta está diseñada para contenido tangencial, es decir,
-            menos importante.
-          </td>
-        </tr>
-      </tbody>
-    </table>
+        <tbody>
+          <tr>
+            <th>Elemento</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <td>Header</td>
+            <td>
+              El HEADER suele llevar el titulo, la descripción corta y el logo
+              de la página. El HEADER por si mismo no separa contenidos, no se
+              debe utilizar aislado, sino dentro de otra etiqueta semántica, o a
+              primer nivel en el BODY
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">Section</td>
+            <td>
+              Representa una unidad de contenido, es decir contenido que
+              responde a un tema concreto
+            </td>
+          </tr>
+          <tr>
+            <td>Se puede anidar un ARTICLE dentro de otro</td>
+          </tr>
+          <tr>
+            <td>Footer</td>
+            <td>
+              Normalmente va al final de la página y contiene información del
+              tipo: autor, copyright, contacto, mapa del sitio, etc.
+            </td>
+          </tr>
+          <tr>
+            <th colspan="2">Navegaciones</th>
+          </tr>
+          <tr>
+            <td>Nav</td>
+            <td>
+              Esta etiqueta está pensada para contener la barra de navehgación o
+              los enlaces a las páginas del sitio web.
+            </td>
+          </tr>
+          <tr>
+            <td>Aside</td>
+            <td>
+              Esta etiqueta está diseñada para contenido tangencial, es decir,
+              menos importante.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-    <div class="contenedor">
-      <div class="tabla">
+    <section class="contenedor">
+      <article class="tabla">
         <ul>
           <li>Uno</li>
           <li>Dos</li>
@@ -71,9 +76,9 @@
           <li>Seis</li>
           <li>Siete</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="tabla">
+      <article class="tabla">
         <ul>
           <li>Uno</li>
           <li>Dos</li>
@@ -90,9 +95,9 @@
           <li>Seis</li>
           <li>Siete</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="tabla">
+      <article class="tabla">
         <ol>
           <li>Uno</li>
           <li>Dos</li>
@@ -102,9 +107,9 @@
           <li>Seis</li>
           <li>Siete</li>
         </ol>
-      </div>
+      </article>
 
-      <div class="tabla">
+      <article class="tabla">
         <ol type="a">
           <li>Uno</li>
           <li>Dos</li>
@@ -114,9 +119,9 @@
           <li>Seis</li>
           <li>Siete</li>
         </ol>
-      </div>
+      </article>
 
-      <div class="tabla">
+      <article class="tabla">
         <ol reversed start="10">
           <li>Uno</li>
           <li>Dos</li>
@@ -126,10 +131,10 @@
           <li>Seis</li>
           <li>Siete</li>
         </ol>
-      </div>
-    </div>
-    <div class="contenedor">
-      <div class="parrafo">
+      </article>
+    </section>
+    <section class="contenedor">
+      <article class="parrafo">
         <h4>Lorem ipsum dolor</h4>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit
@@ -148,7 +153,7 @@
           amet augue odio. Vestibulum sit amet ante laoreet, iaculis purus sit
           amet, placerat ligula.
         </p>
-      </div>
-    </div>
+      </article>
+    </section>
   </body>
 </html>
