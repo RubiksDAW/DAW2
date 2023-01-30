@@ -107,7 +107,7 @@ span {
 
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/WebSimple/imagenes/portada.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imagenes/portada.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
