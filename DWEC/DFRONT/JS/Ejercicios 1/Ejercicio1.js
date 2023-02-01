@@ -100,7 +100,7 @@ let programadores = [
 // let horasDesarrollo = [];
 
 // Declaramos una variable donde guardaremos el numero de horas más alto
-// let horaMaximaimo = 0;
+// let horaMaxima = 0;
 
 // En esta variable almacenamos la id de la tarea más larga
 // let tareaMasLarga;
@@ -114,7 +114,7 @@ let programadores = [
 //   return Number(horas[0]);
 // }
 
-// Declaramos esta funcion para obtener el numero horaMaximaimo de un array de numeros
+// Declaramos esta funcion para obtener el numero horaMaxima de un array de numeros
 // function horaMaxima(arr) {
 //   let horaMaxima = 0;
 
@@ -126,23 +126,23 @@ let programadores = [
 //   return horaMaxima;
 // }
 
-// Recorremos con un primer bucle a nuestros programadores uno por uno
+// // Recorremos con un primer bucle a nuestros programadores uno por uno
 // for (let i = 0; i < programadores.length; i++) {
 //   const tareas = programadores[i].tareas;
 
-//   Guardamos en nuestro array de tareas todas las tareas de los programadores
+//   // Guardamos en nuestro array de tareas todas las tareas de los programadores
 //   tareasProgramadores.push(tareas);
 
-//   Con este segundo bucle recorremos las tareas que hemos ido almacenando en tareas
+//   // Con este segundo bucle recorremos las tareas que hemos ido almacenando en tareas
 //   for (let u = 0; u < tareas.length; u++) {
 
-//     Almacenamos las horas (ya convertiras en numero de horas) en un array declarado previamente
+//     // Almacenamos las horas (ya convertiras en numero de horas) en un array declarado previamente
 //     horasDesarrollo.push(convertirString(tareas[u].tiempoDesarrollo));
 
-//     horaMaximaimo = horaMaxima(horasDesarrollo);
+//     horaMaxima = horaMaxima(horasDesarrollo);
 
 //     if (
-//       horaMaximaimo == convertirString(programadores[i].tareas[u].tiempoDesarrollo)
+//       horaMaxima == convertirString(programadores[i].tareas[u].tiempoDesarrollo)
 //     ) {
 //       tareaMasLarga = programadores[i].tareas[u].idTarea;
 //     }
@@ -157,7 +157,7 @@ let programadores = [
 // console.log(horasDesarrollo);
 
 // // De todas las tareas obtenemos la que mayor horas requiere
-// horaMaximaimo = horaMaxima(horasDesarrollo);
+// horaMaxima = horaMaxima(horasDesarrollo);
 
 // console.log(`La id de la tarea mas larga es ${tareaMasLarga}`);
 
