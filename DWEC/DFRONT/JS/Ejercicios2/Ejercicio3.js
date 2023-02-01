@@ -5,16 +5,15 @@
 const fechaInicio = new Date('10/12/2023');
 const fechaFin = new Date('13/12/2024');
 
-function daysBetween(date1, date2) {
-    // Convert both dates to milliseconds
-    const date1Ms = date1.getTime();
-    const date2Ms = date2.getTime();
-    // Calculate the difference in milliseconds
-    const differenceMs = Math.abs(date1Ms - date2Ms);
-    // Convert back to days and return
-    return Math.round(differenceMs / (1000 * 60 * 60 * 24));
-  }
+// No he sabido como utilizar las fechas de forma correcta. REVISAR 
+function calcularTiempoTranscurrid(fecha1, fecha2) {
+    const diasFecha1 = Date.parse(fecha1.getFullYear());
+    const diasFecha2 = Date.parse(fecha2.getFullYear());
 
-const tiempoTranscurrido = daysBetween(fechaInicio, fechaFin)
+    console.log(diasFecha1)
+    console.log(diasFecha2)
 
-console.log(tiempoTranscurrido)
+    return diasFecha1 - diasFecha2
+}
+
+calcularTiempoTranscurrid(fechaFin,fechaInicio)
