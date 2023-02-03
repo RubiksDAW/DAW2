@@ -11,7 +11,8 @@ let personas = [
   { nombre: "Alberto", apellido: "Rodriguez", edad: 80 },
 ];
 
-let personasOrdenadas = personas.sort((a, b) => {
+// Hacemos uso del metodo .slice() para devolver una copia del array original y .sort() para ordenar este mismo.
+let personasOrdenadas = personas.slice().sort((a, b) => {
     if (a.nombre < b.nombre) return -1;
     if (a.nombre > b.nombre) return 1;
     if (a.edad < b.edad) return -1;
