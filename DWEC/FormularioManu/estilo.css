@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+}
+
+.body{
+    
+}
+.contenedor {
+    /* border: 1px solid black; */
+    background-image: url(img/background.jpg);
+}
+
+.formulario {
+    opacity: 0.97;
+    padding-top: 4%;
+    background-color: aliceblue;
+    width: 60%;
+    /* border: 1px solid black; */
+    display: block;
+    margin: 0 auto;
+    height:900px;
+
+}
+
+.tituloform {
+    /* border: solid 1px; */
+    display: block;
+    height: 50px;
+    text-align: center;
+    font-family: fantasy;
+    font-style: oblique;
+}
+
+.form {
+    text-align: center;
+}
+
+.input {
+    
+    display: block;
+    margin: 0 auto;
+    width: 55%;
+}
+
+.label{
+    width: 55%;
+    margin: 0 auto;
+    display: block;
+    /* border: solid 1px black; */
+    font-family: fantasy;
+    text-align: left;
+    margin-top: 12px;
+    margin-bottom: 3px;
+    font-style: oblique;
+}
+
+.submit{
+    margin-top: 12px;
+}
+
+.socio{
+
+    width: 45%;
+    margin: 0 auto;
+    display: block;
+    /* border: solid 1px black; */
+    text-align: center;
+    margin-top: 12px;
+    font-family: fantasy;
+    font-style: oblique;
+
+}
+
+.socioc{
+    
+    width: 100%;
+    font-family: fantasy;
+    font-style: oblique;
+    
+}
+
+.terminos{
+    width: 10%;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.salto{
+    width: 25%;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.contencion{
+    width: 25%;
+    display: inline-flex;
+    /* border: 1px solid black; */
+    margin-top: 8px;
+}
+
+.respuesta{
+    
+}
+

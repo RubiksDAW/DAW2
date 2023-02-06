@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="general :: headers">
+</head>
+
+<body>
+	<div class="global-container">
+
+		<div th:replace="general :: headerContent"> 
+		</div>
+		
+		<div th:replace="general :: navBarContent"> 
+		</div>
+
+		<div class="main-container">
+			<div class="container">
+				<div class="main-content">
+					<h1>Nuestros productos</h1>
+					<p>
+						Visita nuestros productos <a th:href="@{/products/}">aquí</a>...
+					</p>
+				</div>
+
+				<div class="aside">
+					<img src="/images/Teamwork.jpg">
+				</div>
+			</div>
+		</div>
+		<div th:replace="general :: footerContent">
+		</div>
+	</div>
+</body>
+</html>

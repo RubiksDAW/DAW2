@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DemoThymeleaf</title>
+<script src="https://kit.fontawesome.com/4358b9453c.js"
+	crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto"
+	rel="stylesheet">
+<link rel="stylesheet" href="/styles/maquetacion-basica.css">
+</head>
+<body>
+	<div class="global-container">
+
+		<div class="header">
+			<div class="container">
+				<div class="col-izq">
+					<img src="/images/logo-icon.png" />
+
+					<h1 th:text="#{company.name}">My Company</h1>
+
+				</div>
+				<div class="col-der">
+					<a href="#"><i class="fas fa-search"></i></a> <a href="#">Registro</a>
+					<a href="#">Login</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="nav-bar">
+			<div class="container">
+				<a th:href="@{/}">Home</a> 
+				<a th:href="@{/products/}">Products</a> 
+				<a href="#">Porfolio</a> 
+				<a href="#">Contact</a>
+			</div>
+		</div>
+
+		<div class="main-container">
+			<div class="container">
+				
+				<table th:if="${products.size() > 0}" class="product-table">
+					<thead>
+						<tr>
+							<th>PRODUCTO</th>
+							<th>PRECIO</th>
+							<th>DETALLE</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="prod : ${products}">
+						
+							<td th:text="${prod.name}">Producto</td>
+							<td th:text="${prod.price} + ' €'">2.84 €</td>
+							<td>
+								<a th:href="@{/products/{id}(id=${prod.id})}">Ver</a>
+							</td>
+							<!-- Sintaxis alternativa usando parámetros en la URL
+							<td>
+								<a th:href="@{/products/product(id=${prod.id})}">Ver</a>
+							</td>-->
+						</tr>
+					</tbody>
+				</table>
+				<h1 th:unless="${products.size() > 0}">
+					Lo sentimos... no hay productos actualmente en el catálogo 
+				</h1>
+				
+			</div>
+		</div>
+
+							
+		<div class="footer">
+			<div class="row1">
+				<div class="container">
+					<div class="footer-col">
+						<a href="#">Learning</a> <a href="#">Community</a> <a href="#">Channels</a>
+					</div>
+					<div class="footer-col">
+						<a href="#">FAQ</a> <a href="#">Experiences</a> <a href="#">Collections</a>
+					</div>
+				</div>
+			</div>
+			<div class="row2">
+				<div class="container">
+					<a th:href="@{/}">Home</a> <a th:href="@{/products/}">Products</a>
+					<a href="#">Porfolio</a> <a href="#">Contact</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

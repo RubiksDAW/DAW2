@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="general :: headers">
+</head>
+<body>
+	<div class="global-container">
+
+		<div th:replace="general :: headerContent"></div>
+
+		<div th:replace="general :: navBarContent"></div>
+
+		<div class="main-container">
+			<div class="container">
+				<h1>Resultado</h1>
+				<p th:text="'Nombre: ' + ${product.name}" />
+				<p th:text="'Descripción: ' + ${product.description}" />
+				<p th:text="'Precio: ' + ${product.price}" />
+				<a href="/greeting">Submit another message</a>
+			</div>
+		</div>
+		<div th:replace="general :: footerContent"></div>
+	</div>
+</body>
+</html>

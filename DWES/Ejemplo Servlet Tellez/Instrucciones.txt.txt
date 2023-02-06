@@ -1,0 +1,5 @@
+Descargar librerías (adjuntas) de Jakarta JSTL para el motor de plantillas.
+Añadir las librerías a la carpeta local de tu servidor Apache Tomcat (rutadeTomcat/lib)
+Ver el POM.xml del ejemplo (librerías con ámbito provided)
+Ejecutar sobre Tomcat10
+En el navegador invocar a localhost:8080/nttdata-jsp-example/ExampleServlet
