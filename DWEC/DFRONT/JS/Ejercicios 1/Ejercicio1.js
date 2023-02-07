@@ -91,21 +91,21 @@ let programadores = [
   },
 ];
 
-// Primera solución
+// // Primera solución
 
-// Creamos una variable para guardar las tareas de los programadores
+// // Creamos una variable para guardar las tareas de los programadores
 // let tareasProgramadores = [];
 
-// Declaramos una variable donde guardaremos un array de todas las horas de las tareas de desarrollo
+// // Declaramos una variable donde guardaremos un array de todas las horas de las tareas de desarrollo
 // let horasDesarrollo = [];
 
-// Declaramos una variable donde guardaremos el numero de horas más alto
+// // Declaramos una variable donde guardaremos el numero de horas más alto
 // let horaMaxima = 0;
 
-// En esta variable almacenamos la id de la tarea más larga
+// // En esta variable almacenamos la id de la tarea más larga
 // let tareaMasLarga;
 
-// Declaramos esta funcion para convertir una string a numero, usando el espacio como valor del metodo split
+// // Declaramos esta funcion para convertir una string a numero, usando el espacio como valor del metodo split
 // function convertirString(arr) {
 //   let espacio = " ";
 
@@ -114,19 +114,19 @@ let programadores = [
 //   return Number(horas[0]);
 // }
 
-// Declaramos esta funcion para obtener el numero horaMaxima de un array de numeros
-// function horaMaxima(arr) {
-//   let horaMaxima = 0;
+// // Declaramos esta funcion para obtener el numero horaMaxima de un array de numeros
+// function calcularHoraMaxima(arr) {
+//   let tareahoraMaxima = 0;
 
 //   for (let index = 0; index < arr.length; index++) {
-//     if (arr[index] > horaMaxima) {
-//       horaMaxima = arr[index];
+//     if (arr[index] > tareahoraMaxima) {
+//       tareahoraMaxima = arr[index];
 //     }
 //   }
-//   return horaMaxima;
+//   return tareahoraMaxima;
 // }
 
-// // Recorremos con un primer bucle a nuestros programadores uno por uno
+// // // Recorremos con un primer bucle a nuestros programadores uno por uno
 // for (let i = 0; i < programadores.length; i++) {
 //   const tareas = programadores[i].tareas;
 
@@ -139,7 +139,7 @@ let programadores = [
 //     // Almacenamos las horas (ya convertiras en numero de horas) en un array declarado previamente
 //     horasDesarrollo.push(convertirString(tareas[u].tiempoDesarrollo));
 
-//     horaMaxima = horaMaxima(horasDesarrollo);
+//     horaMaxima = calcularHoraMaxima(horasDesarrollo);
 
 //     if (
 //       horaMaxima == convertirString(programadores[i].tareas[u].tiempoDesarrollo)
@@ -156,8 +156,8 @@ let programadores = [
 // console.log("Estas son todas las horas de cada tarea");
 // console.log(horasDesarrollo);
 
-// // De todas las tareas obtenemos la que mayor horas requiere
-// horaMaxima = horaMaxima(horasDesarrollo);
+// // // De todas las tareas obtenemos la que mayor horas requiere
+// horaMaxima = calcularHoraMaxima(horasDesarrollo);
 
 // console.log(`La id de la tarea mas larga es ${tareaMasLarga}`);
 
@@ -165,8 +165,8 @@ let programadores = [
 
 // El metodo reduce procesa cada elemento de un array y lo reduce a uno
 // En este caso programador representa al tipo de objeto almacenado en el array de programadores
-const horaMaximaDevelopmenthora = programadores.map((programador) => {
-
+// Math.max() podemos devolver el numero maximo dentro de un conjunto de valores. PREGUNTAR SOBRE ...
+const horaMaximaDevelopmenthora = Math.max(...programadores.map((programador) => {
  
   return programador.tareas.reduce((horaMaxima, tarea) => {
 
@@ -179,4 +179,8 @@ const horaMaximaDevelopmenthora = programadores.map((programador) => {
 
     // Este cero indica el valor inicial desde el que debe iniciar el metodo reduce. En este caso es desde programadores[0]
   }, 0);
-});
+}));
+
+console.log(horaMaximaDevelopmenthora)
+
+
