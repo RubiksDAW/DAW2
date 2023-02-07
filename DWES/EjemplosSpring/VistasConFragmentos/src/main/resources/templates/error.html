@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="general :: headers">
+</head>
+<body>
+	<div class="global-container">
+
+		<div th:replace="general :: headerContent"> 
+		</div>
+		
+		<div th:replace="general :: navBarContent"> 
+		</div>
+
+		<div class="main-container">
+			<div class="container">
+				<div class="main-content">
+					<h1>¡VAYA! Ha ocurrido un error...</h1>
+					<p th:text="${message}">Descripción del error</p>
+				</div>
+
+				<div class="aside">
+					<img src="/images/oops.jpg">
+				</div>
+			</div>
+		</div>
+		<div th:replace="general :: footerContent">
+		</div>
+	</div>
+</body>
+</html>

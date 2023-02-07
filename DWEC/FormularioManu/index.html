@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <div class="contenedor">
+
+        <div class="formulario">
+            <h1 class="tituloform">Registro Biblioteca Nacional</h1>
+            <form action="" class="form">
+
+                <label for="nombre" class="label">Nombre:</label>
+                <input type="text" class="input" name="nombre" required>
+                <label for="apellidos" class="label">Apellidos:</label>
+                <input type="text" class="input" name="apellidos" required>
+                <label for="email" class="label">Email:</label>
+                <input type="email" class="input" required>
+                <label for="cars" class="label">Preferencias:</label>
+                <select name="cars" class="input">
+                    <option value="" selected="Selecciona una preferencia...">Selecciona una preferencia...</option>
+                    <option value="ficcion">Ficción</option>
+                    <option value="drama">Drama</option>
+                    <option value="historia">Historia</option>
+                    <option value="fantasia">Fantasía</option>
+                </select>
+
+                <p class="socio">¿Miembro de otra biblioteca?</p>
+                <div class="contencion">
+                    <label for="html" class="socioc">Si  <input type="radio" class="respuesta" name="miembro"
+                            value="si"></label>
+                    <label for="css" class="socioc">No  <input type="radio" class="respuesta" name="miembro"
+                            value="no"></label>
+                </div>
+
+
+                <label for="reclamacion" class="label">Motivo inscripción: </label>
+                <textarea class="input" name="reclamacion" rows="10" cols="50"></textarea>
+
+                <label for="check" class="label">Acepto los terminos y condiciones de uso<input type="checkbox"
+                        name="check" class="terminos" required></label>
+
+
+                <input type="submit" class="submit">
+
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

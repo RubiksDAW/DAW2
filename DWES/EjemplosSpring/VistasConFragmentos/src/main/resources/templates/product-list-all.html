@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="general :: headers">
+</head>
+<body>
+	<div class="global-container">
+
+		<div th:replace="general :: headerContent"> 
+		</div>
+		
+		<div th:replace="general :: navBarContent"> 
+		</div>
+
+		<div class="main-container">
+			<div class="container">
+				
+				<table th:if="${products.size() > 0}" class="product-table">
+					<thead>
+						<tr>
+							<th>PRODUCTO</th>
+							<th>PRECIO</th>
+							<th>DETALLE</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="prod : ${products}">
+						
+							<td th:text="${prod.name}">Producto</td>
+							<td th:text="${prod.price} + ' €'">2.84 €</td>
+							<td>
+								<a th:href="@{/products/{id}(id=${prod.id})}">Ver</a>
+							</td>
+							<!-- Sintaxis alternativa usando par�metros en la URL
+							<td>
+								<a th:href="@{/products/product(id=${prod.id})}">Ver</a>
+							</td>-->
+						</tr>
+					</tbody>
+				</table>
+				<h1 th:unless="${products.size() > 0}">
+					Lo sentimos... no hay productos actualmente en el catálogo 
+				</h1>
+				
+			</div>
+		</div>
+
+							
+		<div th:replace="general :: footerContent">
+		</div>
+	</div>
+</body>
+</html>

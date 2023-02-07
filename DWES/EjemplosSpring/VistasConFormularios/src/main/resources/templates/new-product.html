@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="general :: headers">
+</head>
+<body>
+	<div class="global-container">
+
+		<div th:replace="general :: headerContent"></div>
+
+		<div th:replace="general :: navBarContent"></div>
+
+		<div class="main-container">
+			<div class="container">
+				<h1>Nuevo producto</h1>
+				<form action="#" th:action="@{/process-new-product}" th:object="${product}"
+					method="post">
+					<p>
+						Nombre: <input type="text" th:field="*{name}" />
+					</p>
+					<p>
+						Descripción: <input type="text" th:field="*{description}" />
+					</p>
+					<p>
+						Precio: <input type="number" th:field="*{price}" />
+					</p>
+					<p>
+						<input type="submit" value="Submit" /> <input type="reset"
+							value="Reset" />
+					</p>
+				</form>
+			</div>
+		</div>
+		<div th:replace="general :: footerContent"></div>
+	</div>
+</body>
+</html>

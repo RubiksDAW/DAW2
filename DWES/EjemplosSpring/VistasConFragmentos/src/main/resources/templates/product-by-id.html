@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="general :: headers">
+</head>
+<body>
+	<div class="global-container">
+
+		<div th:replace="general :: headerContent"></div>
+
+		<div th:replace="general :: navBarContent"></div>
+
+		<div class="main-container">
+			<div class="container">
+				<div class="main-content">
+					<h1 th:text="${product.name}">Product name</h1>
+					<p th:text="${product.description}">Product description</p>
+				</div>
+				<div class="aside">
+					<h1 th:text="${product.price}+' €'">8,00 €</h1>
+				</div>
+			</div>
+		</div>
+
+		<div th:replace="general :: footerContent"></div>
+	</div>
+</body>
+</html>

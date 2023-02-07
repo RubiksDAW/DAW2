@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DemoThymeleaf</title>
+<script src="https://kit.fontawesome.com/4358b9453c.js"
+	crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto"
+	rel="stylesheet">
+<link rel="stylesheet" href="/styles/maquetacion-basica.css">
+</head>
+<body>
+	<div class="global-container">
+
+		<div class="header">
+			<div class="container">
+				<div class="col-izq">
+					<img src="/images/logo-icon.png" />
+
+					<h1 th:text="#{company.name}">My Company</h1>
+
+				</div>
+				<div class="col-der">
+					<a href="#"><i class="fas fa-search"></i></a> <a href="#">Registro</a>
+					<a href="#">Login</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="nav-bar">
+			<div class="container">
+				<a th:href="@{/}">Home</a> <a th:href="@{/products/}">Products</a> <a
+					href="#">Porfolio</a> <a href="#">Contact</a>
+			</div>
+		</div>
+
+		<div class="main-container">
+			<div th:object="${product}" class="container">
+			
+				<div class="main-content">
+					<h1 th:text="*{name}">Product name</h1>
+					<p th:text="*{description}">Product description</p>
+				</div>
+				
+				<div class="aside">
+					<h1 th:text="*{price} + ' €'">8,00 €</h1>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="row1">
+				<div class="container">
+					<div class="footer-col">
+						<a href="#">Learning</a> <a href="#">Community</a> <a href="#">Channels</a>
+					</div>
+					<div class="footer-col">
+						<a href="#">FAQ</a> <a href="#">Experiences</a> <a href="#">Collections</a>
+					</div>
+				</div>
+			</div>
+			<div class="row2">
+				<div class="container">
+					<a th:href="@{/}">Home</a> <a th:href="@{/products/}">Products</a>
+					<a href="#">Porfolio</a> <a href="#">Contact</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
