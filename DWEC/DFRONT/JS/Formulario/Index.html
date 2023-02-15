@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <form action="#">
+
+        <fieldset>
+            <legend>Datos personales:</legend>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre..."><br><br>
+
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos..."><br><br>
+
+            <label for="edad">Edad</label>
+            <input type="number" name="edad" id="edad"><br><br>
+
+            <div>
+                <input type="radio" id="sexo" name="sexo" value="hombre">
+                <label for="sexo">Hombre</label>
+            </div>
+
+            <div>
+                <input type="radio" id="sexo" name="sexo" value="mujer">
+                <label for="sexo">Mujer</label>
+            </div>
+            <br>
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="date" name="nacimiento" id="nacimiento">
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Dirección</legend>
+
+            <label for="via">Tipo de via:</label>
+            <input type="text" name="via" id="via" placeholder="Calle, Avenida, Plaza..."><br><br>
+
+            <label for="nombreVia">Nombre:</label>
+            <input type="text" name="nombreVia" id="nombreVia" placeholder="Nombre vía..."><br><br>
+
+            <label for="portal">Portal:</label>
+            <input type="text" name="portal" id="portal" placeholder="Portal..."><br><br>
+
+            <label for="planta">Planta:</label>
+            <input type="text" name="planta" id="planta" placeholder="Planta......"><br><br>
+
+            <label for="puerta">Puerta:</label>
+            <input type="text" name="puerta" id="puerta" placeholder="Puerta..."><br><br>
+
+            <label for="codigo">Código postal:</label>
+            <input type="number" name="codigo" id="codigo"><br><br>
+
+
+            <label for="localidad">Localidad:</label>
+            <input type="text" name="localidad" id="localidad" placeholder="Localidad..."><br><br>
+
+            <label for="provincia">Provincia:</label>
+            <input type="text" name="provincia" id="provincia" placeholder="Provincia..."><br><br>
+
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Contacto:</legend>
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" placeholder="Email..."><br><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" name="telefono" id="telefono"><br><br>
+
+            <label for="imagen">Sube tu imagen (solo JPG o PNG, máximo 1MB):</label>
+            <input type="file" id="imagen" name="imagen" accept=".jpg, .png" required>
+            <br>
+
+            <div>
+                <p>Aficiones:</p>
+                <input type="checkbox" id="bicicleta" name="bicicleta" value="Bicicleta">
+                <label for="bicicleta"> Ciclismo</label><br>
+
+                <input type="checkbox" id="cine" name="cine" value="Cine">
+                <label for="cine"> Cine</label><br>
+
+                <input type="checkbox" id="natacion" name="natacion" value="Natación">
+                <label for="natacion"> Natación</label><br>
+
+                <input type="checkbox" id="fotografia" name="fotografia" value="Fotografía">
+                <label for="fotografia"> Fotografía</label><br>
+
+                <input type="checkbox" id="animales" name="animales" value="Animales">
+                <label for="animales"> Animales</label><br>
+
+                <input type="checkbox" id="plantas" name="plantas" value="Plantas">
+                <label for="plantas"> Plantas</label><br>
+
+                <input type="checkbox" id="videojuegos" name="videojuegos" value="Videojuegos">
+                <label for="videojuegos">Videojuegos</label><br>
+
+                <input type="checkbox" id="literatura" name="literatura" value="Literatura">
+                <label for="literatura">Literatura</label><br>
+
+                <input type="checkbox" id="tecnologia" name="tecnologia" value="Tecnología">
+                <label for="tecnologia">Tecnología</label><br><br>
+            </div>
+
+            <label for="observaciones">Observaciones:</label><br>
+            <input id="observaciones" name="observaciones" size="100" placeholder="Déjanos algo que quieras compartir con nosotros...">
+
+        </fieldset>
+
+
+    </form>
+</body>
+
+</html>
