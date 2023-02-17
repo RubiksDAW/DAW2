@@ -15,22 +15,21 @@
             <legend>Datos personales:</legend>
 
             <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre..."><br><br>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre..." pattern="[A-Za-z ]+"><br><br>
 
             <label for="apellidos">Apellidos</label>
             <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos..."><br><br>
 
             <label for="edad">Edad</label>
-            <input type="number" name="edad" id="edad"><br><br>
+            <input type="number" name="edad" id="edad" min="0" max="150"><br><br>
 
             <div>
-                <input type="radio" id="sexo" name="sexo" value="hombre">
-                <label for="sexo">Hombre</label>
-            </div>
-
-            <div>
-                <input type="radio" id="sexo" name="sexo" value="mujer">
-                <label for="sexo">Mujer</label>
+                Sexo:
+                <input type="radio" id="hombre" name="sexo" value="hombre">
+                <label for="hombre">Hombre</label>
+        
+                <input type="radio" id="mujer" name="sexo" value="mujer">
+                <label for="mujer">Mujer</label>
             </div>
             <br>
             <label for="nacimiento">Fecha de nacimiento</label>
@@ -43,7 +42,7 @@
             <legend>Dirección</legend>
 
             <label for="via">Tipo de via:</label>
-            <input type="text" name="via" id="via" placeholder="Calle, Avenida, Plaza..."><br><br>
+            <input type="text" name="via" id="via" placeholder="Calle, Avenida, Plaza..." tabindex="1"><br><br>
 
             <label for="nombreVia">Nombre:</label>
             <input type="text" name="nombreVia" id="nombreVia" placeholder="Nombre vía..."><br><br>
@@ -60,13 +59,128 @@
             <label for="codigo">Código postal:</label>
             <input type="number" name="codigo" id="codigo"><br><br>
 
+            <div>
+                <label for="provincia">Provincia:</label>
+                <select required name="provincia" id="provincia">
+                  <optgroup label="Selecciona una provincia">
+                    <option value="selecciona" disabled selected>Elige Provincia</option>
+                  </optgroup>
 
+                  <optgroup label="Comunidad Autónoma de Andalucía">
+                    <option value="Almería">Almería</option>
+                    <option value="Cádiz">Cádiz</option>
+                    <option value="Córdoba">Córdoba</option>
+                    <option value="Granada">Granada</option>
+                    <option value="Huelva">Huelva</option>
+                    <option value="Jaén">Jaén</option>
+                    <option value="Málaga">Málaga</option>
+                    <option value="Sevilla">Sevilla</option>
+                  </optgroup>
+
+                  <optgroup label="Comunidad Autónoma de Aragón">
+                    <option value="Huesca">Huesca</option>
+                    <option value="Teruel">Teruel</option>
+                    <option value="Zaragoza">Zaragoza</option>
+                  </optgroup>
+
+                  <optgroup label="Comunidad Autónoma del Principado de Asturias">
+                    <option value="Asturias">Asturias</option>
+                  </optgroup>
+
+                  <optgroup label="Comunidad Autónoma de las Islas Baleares">
+                    <option value="Baleares">Baleares</option>
+                  </optgroup>
+
+                  <optgroup label="Comunidad Autónoma de las Islas Canarias">
+                    <option value="Las Palmas">Las Palmas</option>
+                    <option value="Tenerife">Tenerife</option>
+                  </optgroup>
+
+                  <optgroup label="Comunidad Autónoma de Cantabria">
+                    <option value="Cantabria">Cantabria</option>
+                  </optgroup>
+
+                  <optgroup label="Comunidad Autónoma de Castilla-La Mancha">
+                    <option value="Albacete">Albacete</option>
+                    <option value="Ciudad Real">Ciudad Real</option>
+                    <option value="Cuenca">Cuenca</option>
+                    <option value="Guadalajara">Guadalajara</option>
+                    <option value="Toledo">Toledo</option>
+                  </optgroup>
+
+                  <optgroup label="Comunidad Autónoma de Castilla y León">
+                    <option value="Ávila">Ávila</option>
+                    <option value="Burgos">Burgos</option>
+                    <option value="León">León</option>
+                    <option value="Palencia">Palencia</option>
+                    <option value="Salamanca">Salamanca</option>
+                    <option value="Segovia">Segovia</option>
+                    <option value="Soria">Soria</option>
+                    <option value="Valladolid">Valladolid</option>
+                    <option value="Zamora">Zamora</option>
+                  </optgroup>
+
+                  <optgroup label="Comunidad Autónoma de Cataluña">
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Gerona/Girona">Gerona/Girona</option>
+                    <option value="Lérida/Lleida">Lérida/Lleida</option>
+                    <option value="Tarragona">Tarragona</option>
+                  </optgroup>
+
+                  <optgroup label="Comunitat Valenciana">
+                    <option value="Alicante">Alicante</option>
+                    <option value="Castellón">Castellón</option>
+                    <option value="Valencia">Valencia</option>
+                  </optgroup>
+
+                  <optgroup label="Extremadura">
+                    <option value="Badajoz">Badajoz</option>
+                    <option value="Cáceres">Cáceres</option>
+                  </optgroup>
+
+                  <optgroup label="Galicia">
+                    <option value="La Coruña">La Coruña</option>
+                    <option value="Lugo">Lugo</option>
+                    <option value="Orense">Orense</option>
+                    <option value="Pontevedra">Pontevedra</option>
+                  </optgroup>
+
+                  <optgroup label="Comunidad de Madrid">
+                    <option value="Madrid">Madrid</option>
+                  </optgroup>
+
+                  <optgroup label="Región de Murcia">
+                    <option value="Murcia">Murcia</option>
+                  </optgroup>
+
+                  <optgroup label="Comunidad foral de Navarra">
+                    <option value="Navarra">Navarra</option>
+                  </optgroup>
+
+                  <optgroup label="País Vasco">
+                    <option value="Álava">Álava</option>
+                    <option value="Guipúzcoa">Guipúzcoa</option>
+                    <option value="San Sebastián">San Sebastián</option>
+                  </optgroup>
+
+                  <optgroup label="La Rioja">
+                    <option value="La Rioja">La Rioja</option>
+                  </optgroup>
+
+                  <optgroup label="Ciudad Autónoma de Ceuta">
+                    <option value="Ceuta">Ceuta</option>
+                  </optgroup>
+
+                  <optgroup label="Ciudad Autónoma de Melilla">
+                    <option value="Melilla">Melilla</option>
+                  </optgroup>
+
+                </select>
+            </div>
+            <br>
+            
             <label for="localidad">Localidad:</label>
             <input type="text" name="localidad" id="localidad" placeholder="Localidad..."><br><br>
-
-            <label for="provincia">Provincia:</label>
-            <input type="text" name="provincia" id="provincia" placeholder="Provincia..."><br><br>
-
 
         </fieldset>
 
@@ -75,34 +189,34 @@
             <legend>Contacto:</legend>
 
             <label for="email">Email:</label>
-            <input type="text" name="email" id="email" placeholder="Email..."><br><br>
+            <input type="email" name="email" id="email" placeholder="Email..."><br><br>
 
             <label for="telefono">Teléfono:</label>
-            <input type="tel" name="telefono" id="telefono"><br><br>
+            <input type="tel" name="telefono" id="telefono" pattern="[0-9]{9}"><br><br>
 
             <label for="imagen">Sube tu imagen (solo JPG o PNG, máximo 1MB):</label>
-            <input type="file" id="imagen" name="imagen" accept=".jpg, .png" required>
+            <input type="file" id="imagen" name="imagen" accept=".jpg, .png" required="required">
             <br>
 
             <div>
                 <p>Aficiones:</p>
                 <input type="checkbox" id="bicicleta" name="bicicleta" value="Bicicleta">
-                <label for="bicicleta"> Ciclismo</label><br>
+                <label for="bicicleta">Ciclismo</label><br>
 
                 <input type="checkbox" id="cine" name="cine" value="Cine">
-                <label for="cine"> Cine</label><br>
+                <label for="cine">Cine</label><br>
 
                 <input type="checkbox" id="natacion" name="natacion" value="Natación">
-                <label for="natacion"> Natación</label><br>
+                <label for="natacion">Natación</label><br>
 
                 <input type="checkbox" id="fotografia" name="fotografia" value="Fotografía">
-                <label for="fotografia"> Fotografía</label><br>
+                <label for="fotografia">Fotografía</label><br>
 
                 <input type="checkbox" id="animales" name="animales" value="Animales">
-                <label for="animales"> Animales</label><br>
+                <label for="animales">Animales</label><br>
 
                 <input type="checkbox" id="plantas" name="plantas" value="Plantas">
-                <label for="plantas"> Plantas</label><br>
+                <label for="plantas">Plantas</label><br>
 
                 <input type="checkbox" id="videojuegos" name="videojuegos" value="Videojuegos">
                 <label for="videojuegos">Videojuegos</label><br>
@@ -115,10 +229,13 @@
             </div>
 
             <label for="observaciones">Observaciones:</label><br>
-            <input id="observaciones" name="observaciones" size="100" placeholder="Déjanos algo que quieras compartir con nosotros...">
+            <textarea id="observaciones" name="observaciones" size="100" placeholder="Déjanos algo que quieras compartir con nosotros..." maxlength="500"></textarea>
 
         </fieldset>
 
+        <input type="button" id="cancelar" value="Cancelar">
+        <input type="reset" value="Reestablecer">
+        <input type="submit" value="Enviar">
 
     </form>
 </body>
