@@ -1,17 +1,17 @@
-import { initializeApp } from 'firebase/app';
+// import { initializeApp } from 'firebase/app';
 
-      var firebaseConfig = {
-        apiKey: "AIzaSyCqyArgj7KdvwpMeLS5_gfMjOxMOt2ndYU",
+//       var firebaseConfig = {
+//         apiKey: "AIzaSyCqyArgj7KdvwpMeLS5_gfMjOxMOt2ndYU",
 
-        authDomain: "todo-list-6ebfe.firebaseapp.com",
+//         authDomain: "todo-list-6ebfe.firebaseapp.com",
 
-        projectId: "todo-list-6ebfe",
+//         projectId: "todo-list-6ebfe",
 
-        storageBucket: "todo-list-6ebfe.appspot.com",
+//         storageBucket: "todo-list-6ebfe.appspot.com",
 
-        messagingSenderId: "816229595748",
+//         messagingSenderId: "816229595748",
 
-        appId: "1:816229595748:web:e41dfa325f5b8dfeb1bd71",
-      };
+//         appId: "1:816229595748:web:e41dfa325f5b8dfeb1bd71",
+//       };
       
-const app = initializeApp(firebaseConfig);
+// const app = initializeApp(firebaseConfig);
