@@ -1,0 +1,168 @@
+.cabecera {
+  /* z-index: 3; */
+  /* position: relative; */
+  /* position: sticky; */
+  top: 0;
+  background-color: white;
+  height: 90px;
+/* border: 1px solid black; */
+}
+
+.menu {
+  padding-top: 10px;
+  /* padding-left: 50px; */
+  display: flex;
+  align-items: center;
+  height: 80px;
+  justify-items: center;
+  width: 100%;
+  gap: 20%;
+  /* border: 1px solid red; */
+}
+
+.elem-cabe {
+    border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  flex-grow: 1;  
+  margin: 0px;
+  justify-content: flex-start;
+  gap: 0px 20px;
+  overflow: visible;
+  border-radius: 0px;
+}
+
+.elem-cabe-left {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  flex-grow: 1;  
+  margin: 0px;
+  padding-left: 20px;
+  justify-content: flex-start;
+  gap: 0px 20px;
+  overflow: visible;
+  border-radius: 0px;
+}
+
+.elem-cabe-rigth {
+border: 1px solid red;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  align-self: center;
+  flex-grow: 1;  
+  margin: 0px;
+  padding-right: 40px;
+  gap: 0px 20px;
+  overflow: visible;
+  border-radius: 0px;
+}
+
+.elem-cabe img{
+    /* width: 100px; */
+    /* margin-left: -50px; */
+}
+
+.elem-cabe a {
+
+  flex-grow: 0;
+  height: 20px;
+  margin: 0px 10px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  line-height: 1;
+  border-radius: 0px;
+  font-style: normal;
+  text-align: left;
+}
+
+.cure {
+    margin-left: -100px;
+
+}
+
+
+
+.btn-contact {
+  align-self: center;
+  min-width: 140px;
+  max-width: 140px;
+  min-height: 40px;
+  width: 140px;
+  margin: 0px 10px 0px 0px;
+  padding: 0px;
+  cursor: pointer;
+  background: rgb(239, 122, 26);
+  border: 1px solid rgb(239, 122, 26);
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  line-height: 1.5;
+  border-radius: 100px;
+  transition: border-color 500ms ease 0s, background 500ms ease 0s;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.banner {
+  width: 100%;
+  display: flex;
+  height: 40px;
+  background-color: #fd7e14;
+  text-align: center;
+}
+
+.imagen-principal {
+  /* z-index: 2; */
+  background-image: url("/imagenes/cure.jpg");
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* margin-top: -62px; */
+}
+
+.imagen-principal-texto {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  /* width: 80%; */
+  border: 1px solid green;
+  transform: translate(-50%, -50%);
+}
+
+.imagen-principal-texto h2 {
+  font-family: "Numans";
+  font-size: 32px;
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+.imagen-principal-texto p {
+  width: 300px;
+  text-align: left;
+  font-family: "Numans";
+  font-weight: 400;
+}
+
+
+
+.banner p {
+  width: 100%;
+}
+
+.container{
+    height: 1000px;
+}
