@@ -127,7 +127,7 @@
 .banner {
   width: 100%;
   display: flex;
-  height: 40px;
+  height: 60px;
   align-items: center;
   background-color: #fd7e14;
   text-align: center;
@@ -138,25 +138,22 @@
 
 .banner>p {
   color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  
 }
 
 .banner-txt {
   width: 100%;
   color: white;
+  
 }
 
 /**IMAGEN PRINCIPAL DEL HEADER */
 
 .imagen-principal {
-  background-image: url("https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Fd75%2Ff1669625365899x265394123099430100%2FBanner-hero-2800x1200-rebrand-trad-es.jpg?w=1536&h=&auto=compress&dpr=3&fit=max");
-  height: 700px;
-  /* background-position: center; */
+  background-image: url("https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Fd75%2Ff1669625280595x240802983719949900%2FBanner-hero-mobile-rebrand-trad-es.jpg?w=512&h=&auto=compress&dpr=1.25&fit=max");
+  /* height: 700px; */
   background-repeat: no-repeat;
-  /* background-size: cover; */
-  margin-top: -80px;
-  /* position: relative; */
+  /* margin-top: -80px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,6 +168,7 @@
   font-size: 32px;
   color: rgb(0, 0, 0);
   width: 80%;
+  margin-top: -150px;
 }
 
 .imagen-principal-texto>h2>strong {
@@ -423,6 +421,7 @@
   width: 100%;
   margin-left: 0;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .cabecera-etapas p {
@@ -433,6 +432,7 @@
   color: rgb(0, 0, 0);
   margin-left: 0;
   line-height: 1.5;
+  margin-top: 0;
 }
 
 .etapas p {
@@ -452,6 +452,7 @@
   padding-left: 10%;
   padding-right: 10%;
   margin-left: 0;
+  margin-top: -30px;
 }
 
 .line-etapas {
@@ -472,6 +473,7 @@
   margin-left: 0;
   text-align: left;
   white-space: normal;
+  margin-top: 40px;
 }
 
 .line-etapas p {
@@ -482,6 +484,7 @@
   color: rgb(0, 0, 0);
   line-height: 1.5;
   margin-left: 0;
+  margin-bottom: 30px;
 }
 
 .line-etapas button {
@@ -943,6 +946,10 @@
   gap: 6%;
 }
 
+.enlaces ul {
+  gap: 10px;
+}
+
 .enlaces>ul>li>ul {
   padding-left: 0;
 }
@@ -966,4 +973,6 @@
 .derechos>p:first-child {
   border: 1px solid grey;
   padding: 15px 15px 15px 15px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
